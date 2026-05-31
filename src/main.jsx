@@ -158,6 +158,13 @@ function AstroVisionWebsite() {
         <img src="/assets/retail-rollout-1.jpg" alt="Retail rollout completed project photo 1" />
         <img src="/assets/retail-rollout-2.jpg" alt="Retail rollout completed project photo 2" />
         <img src="/assets/retail-rollout-3.jpg" alt="Retail rollout completed project photo 3" />
+        <img src="/assets/nike-kids-finished-display.jpg" alt="Nike kids finished display" />
+<img src="/assets/nike-kids-wall.jpg" alt="Nike kids display wall" />
+        <img src="/assets/skechers-work-wall.jpg" alt="Skechers work footwear display wall" />
+<img src="/assets/workwear-display-wall.jpg" alt="Workwear display wall" />
+
+<img src="/assets/slatwall-installation.jpg" alt="Slatwall installation" />
+<img src="/assets/residential-cabinets.jpg" alt="Cabinet installation project" />
       </div>
 
       <div className="gallery-video-section">
