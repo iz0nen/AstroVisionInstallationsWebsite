@@ -119,10 +119,10 @@ function AstroVisionWebsite() {
       <div className="section-head simple">
         <div>
           <p className="eyebrow">Completed Projects</p>
-          <h2>Retail Rollout Installation Work</h2>
+          <h2>Commercial Installation Work</h2>
         </div>
         <p>
-          Photos from completed commercial retail installation projects, including fixture systems, shelving, displays, and store setup.
+          Photos from completed commercial retail installation projects.
         </p>
       </div>
 
@@ -135,7 +135,7 @@ function AstroVisionWebsite() {
       <div className="gallery-video-section">
         <div className="video-intro">
           <p className="eyebrow">Project Walkthrough</p>
-          <h2>Retail Rollout Video Overview</h2>
+          <h2>Walkthroughs</h2>
           <p>
             A walkthrough look at commercial retail fixture installation and project execution in progress.
           </p>
