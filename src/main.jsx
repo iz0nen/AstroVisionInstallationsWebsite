@@ -53,7 +53,7 @@ function AstroVisionWebsite() {
     Project Gallery
   </button>
 
-  <button className="nav-pill" onClick={() => setPage("careers")}>
+  <button className="nav-pill" onClick={() => setPage("join")}>
     Join Our Team
   </button>
 
