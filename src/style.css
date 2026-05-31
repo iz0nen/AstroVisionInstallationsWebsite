@@ -705,4 +705,47 @@ textarea:focus {
   .service-line {
     font-size: 16px;
   }
+  /* FORCE HEADER NAV BUTTON STYLE */
+
+.header button,
+.header .nav button,
+.header nav button,
+.header a:not(.brand) {
+  appearance: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 12px 22px !important;
+  border-radius: 999px !important;
+
+  background: linear-gradient(135deg, #2563eb, #1e40af) !important;
+  color: #ffffff !important;
+
+  border: 1px solid rgba(147, 197, 253, 0.35) !important;
+  box-shadow: 0 12px 28px rgba(30, 64, 175, 0.35) !important;
+
+  font-weight: 900 !important;
+  font-size: 14px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+
+  transition: all 0.25s ease !important;
+}
+
+.header button:hover,
+.header .nav button:hover,
+.header nav button:hover,
+.header a:not(.brand):hover {
+  background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+  transform: translateY(-2px) !important;
+  color: #ffffff !important;
+}
+
+.header .nav,
+.header nav {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+}
 }
