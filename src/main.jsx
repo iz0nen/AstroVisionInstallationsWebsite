@@ -41,7 +41,9 @@ function AstroVisionWebsite() {
     <div className="site">
       <header className="header">
         <div className="nav-wrap">
-          <a href="#home" className="brand text-brand">Astro Vision Installations</a>
+          <a href="#" className="brand brand-logo" onClick={() => setPage("home")}>
+  <img src="/assets/astro-vision-header-logo.png" alt="Astro Vision Installations" />
+</a>
           <nav className="nav desktop-nav">
   <button className="nav-pill" onClick={() => setPage("home")}>
     Home
