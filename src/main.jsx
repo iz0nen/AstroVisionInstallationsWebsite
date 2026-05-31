@@ -159,18 +159,30 @@ function AstroVisionWebsite() {
         </div>
       </div>
 
-      <div className="photo-grid gallery-overview-grid">
-        <img src="/assets/retail-rollout-1.jpg" alt="Retail rollout completed project photo 1" />
-        <img src="/assets/retail-rollout-2.jpg" alt="Retail rollout completed project photo 2" />
-        <img src="/assets/retail-rollout-3.jpg" alt="Retail rollout completed project photo 3" />
-        <img src="/assets/nike-kids-finished-display.jpg" alt="Nike kids finished display" />
-<img src="/assets/nike-kids-wall.jpg" alt="Nike kids display wall" />
-        <img src="/assets/skechers-work-wall.jpg" alt="Skechers work footwear display wall" />
-<img src="/assets/workwear-display-wall.jpg" alt="Workwear display wall" />
+      <section className="portfolio-showcase">
+  <div className="project-grid">
 
-<img src="/assets/slatwall-installation.jpg" alt="Slatwall installation" />
-<img src="/assets/residential-cabinets.jpg" alt="Cabinet installation project" />
-      </div>
+    <img src="/assets/Fixture half built.jpg" alt="Fixture installation project" />
+    <img src="/assets/retail-rollout-1.jpg" alt="Retail rollout project" />
+    <img src="/assets/retail-rollout-2.jpg" alt="Retail rollout project" />
+    <img src="/assets/retail-rollout-3.jpg" alt="Retail rollout project" />
+
+    <img src="/assets/skechers-work-wall.jpg" alt="Skechers display wall" />
+    <img src="/assets/workwear-display-wall.jpg" alt="Workwear display wall" />
+    <img src="/assets/nike-kids-wall.jpg" alt="Nike display wall" />
+
+
+    <img src="/assets/slatwall-installation.jpg" alt="Slatwall installation" />
+    <img src="/assets/residential-cabinets.jpg" alt="Cabinet installation" />
+    <img src="/assets/nike-kids-finished-display.jpg" alt="Nike completed display" />
+    <img src="/assets/Signage nike 1.jpg" alt="Nike retail project" />
+    <img src="/assets/Signage nike 2.jpg" alt="Nike womens display" />
+    <img src="/assets/Signage nike 3.jpg" alt="Nike kids department" />
+
+    <img src="/assets/cashwrap.jpg" alt="Cashwrap installation" />
+
+  </div>
+</section>
 
       <div className="gallery-video-section">
         <div className="video-intro">
