@@ -41,7 +41,7 @@ function AstroVisionWebsite() {
     <div className="site">
       <header className="header">
         <div className="nav-wrap">
-          <button className="brand" onClick={() => goTo("home")}><img src="/assets/astro-vision-secondary-logo.png" alt="Astro Vision Installations" /></button>
+          <a href="#home" className="brand text-brand">Astro Vision Installations</a>
           <nav className="nav desktop-nav">
             <button onClick={() => goTo("home")} className={page === "home" ? "active" : ""}>Home</button>
             <button onClick={() => goTo("gallery")} className={page === "gallery" ? "active" : ""}>Project Gallery</button>
