@@ -1380,9 +1380,9 @@ textarea:focus {
 ========================= */
 
 .team-showcase {
-  max-width: 1500px;
-  margin: 100px auto;
-  padding: 0 40px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 10px 10px;
 }
 
 .section-head.centered {
