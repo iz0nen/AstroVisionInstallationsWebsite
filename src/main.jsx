@@ -93,7 +93,7 @@ function AstroVisionWebsite() {
             <div className="two-col"><div><p className="eyebrow">About Us</p><h2>Bringing Concepts to Completion</h2></div><div className="copy"><p>At Astro Vision Installations, we transform plans, designs, and ideas into finished spaces through expert installation and craftsmanship.</p><p>From retail fixtures and custom millwork to cabinetry, interior signage, displays, graphics, and finish carpentry, we bring reliability, attention to detail, and professionalism to every project.</p><p>We partner with general contractors, developers, retailers, facility managers, and commercial property owners to ensure projects are completed safely, efficiently, and to the highest standards.</p></div></div>
           </section>
 
-          <section id="services" className="section tinted"><p className="eyebrow">Our Services</p><h2>installation services built around execution.</h2><div className="cards">{services.map(s => <div className="card" key={s.title}><div className="icon">{s.icon}</div><h3>{s.title}</h3><p>{s.text}</p></div>)}</div></section>
+          <section id="services" className="section tinted"><p className="eyebrow">Our Services</p><h2>Installation Services Built Around Execution.</h2><div className="cards">{services.map(s => <div className="card" key={s.title}><div className="icon">{s.icon}</div><h3>{s.title}</h3><p>{s.text}</p></div>)}</div></section>
 
           <section className="team-showcase">
   <div className="field-experience-header">
@@ -113,7 +113,7 @@ function AstroVisionWebsite() {
     <div className="team-showcase-card">
       <img
         src="/assets/corey-working.jpg"
-        alt="Retail merchandising and shelf installation"
+        alt="Retail Signage, merchandising, and shelf installation"
       />
     </div>
 
