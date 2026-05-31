@@ -1045,7 +1045,7 @@ textarea:focus {
 }
 
 .footer-logo {
-  height: 60px !important;
+  height: 80px !important;
   width: auto !important;
   margin: 0 auto 16px !important;
   display: block !important;
@@ -1108,18 +1108,18 @@ textarea:focus {
 }
 
 .foot-note p:last-child {
-  margin-top: 16px !important;
+  margin-top: 10px !important;
   font-weight: 700 !important;
   color: #64748b !important;
 }
 
 @media (max-width: 700px) {
   .footer {
-    padding: 52px 18px 34px !important;
+    padding: 52px 10px 34px !important;
   }
 
   .footer-logo {
-    height: 50px !important;
+    height: 80px !important;
   }
 
   .contact {
