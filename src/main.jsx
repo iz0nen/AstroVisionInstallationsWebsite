@@ -16,52 +16,41 @@ function AstroVisionWebsite() {
   ];
 
   const industries = ["Retail", "Hospitality", "Corporate Offices", "Healthcare", "Education", "Commercial Real Estate", "Developers", "General Contractors", "Property Management"];
-  <section id="projects" className="section projects">
-  <div className="section-head">
-    <p className="eyebrow">Project Gallery</p>
-    <h2>Featured Work by Category</h2>
-    <p>
-      Explore completed work organized by service category. More project photos will be added as new installations are completed.
-    </p>
-  </div>
 
-  <div className="gallery-categories">
-    {projectCategories.map((category) => (
-      <div className="project-category" key={category.title}>
-        <div className="category-header">
-          <h3>{category.title}</h3>
-          <p>{category.description}</p>
-        </div>
+  const projectCategories = [
+    {
+      title: "Retail Rollout",
+      description:
+        "Retail fixture installation, shelving systems, store setup, merchandising displays, and rollout support for commercial retail environments.",
+      video: "/assets/retail-rollout-walkthrough.mp4",
+      photos: [
+        "/assets/retail-rollout-1.jpg",
+        "/assets/retail-rollout-2.jpg",
+        "/assets/retail-rollout-3.jpg",
+      ],
+    },
+    {
+      title: "Millwork Installation",
+      description: "Custom millwork, feature walls, trim packages, reception desks, wall panel systems, custom woodwork, and specialty installations.",
+      photos: [],
+    },
+    {
+      title: "Cabinetry Installation",
+      description: "Commercial casework, office cabinetry, built-ins, storage systems, and custom cabinet installations.",
+      photos: [],
+    },
+    {
+      title: "Interior Signage, Displays & Graphics",
+      description: "Interior signage, displays, wall graphics, wayfinding systems, branded environments, and vinyl graphics.",
+      photos: [],
+    },
+    {
+      title: "Finish Carpentry",
+      description: "Doors, hardware, trim, molding, wall panel systems, detailed finish work, and punch-list completion.",
+      photos: [],
+    },
+  ];
 
-        {category.video && (
-          <video
-            className="project-video"
-            src={category.video}
-            controls
-            muted
-            playsInline
-          />
-        )}
-
-        {category.photos.length > 0 ? (
-          <div className="photo-grid">
-            {category.photos.map((photo, index) => (
-              <img
-                key={photo}
-                src={photo}
-                alt={`${category.title} project ${index + 1}`}
-              />
-            ))}
-          </div>
-        ) : (
-          <div className="coming-soon">
-            Photos coming soon.
-          </div>
-        )}
-      </div>
-    ))}
-  </div>
-</section>
   const chooseUs = ["Experienced Installation Professionals", "Commercial Construction Expertise", "Reliable Scheduling & Coordination", "Detail-Oriented Craftsmanship", "Safety-Focused Work Practices", "Commitment to Client Satisfaction"];
 
   return (
@@ -98,7 +87,56 @@ function AstroVisionWebsite() {
         </section>
 
         <section id="services" className="section tinted"><p className="eyebrow">Our Services</p><h2>Commercial installation services built around execution.</h2><div className="cards">{services.map(s => <div className="card" key={s.title}><div className="icon">{s.icon}</div><h3>{s.title}</h3><p>{s.text}</p></div>)}</div></section>
-        <section id="projects" className="section"><div className="section-head"><div><p className="eyebrow">Featured Projects</p><h2>A clean showcase for completed work.</h2></div><p>Replace these placeholders with real jobsite photos, before-and-after images, or finished installation shots.</p></div><div className="projects">{projectTypes.map((p,i)=><div className="project" key={p}><div className="photo"><span>0{i+1}</span><small>Project Photo</small></div><div className="project-body"><h3>{p}</h3><p>Completed installation showcase placeholder.</p></div></div>)}</div></section>
+
+        <section id="projects" className="section projects">
+          <div className="section-head">
+            <div>
+              <p className="eyebrow">Project Gallery</p>
+              <h2>Featured Work by Category</h2>
+            </div>
+            <p>
+              Explore completed work organized by service category. More project photos will be added as new installations are completed.
+            </p>
+          </div>
+
+          <div className="gallery-categories">
+            {projectCategories.map((category) => (
+              <div className="project-category" key={category.title}>
+                <div className="category-header">
+                  <h3>{category.title}</h3>
+                  <p>{category.description}</p>
+                </div>
+
+                {category.video && (
+                  <video
+                    className="project-video"
+                    src={category.video}
+                    controls
+                    muted
+                    playsInline
+                  />
+                )}
+
+                {category.photos.length > 0 ? (
+                  <div className="photo-grid">
+                    {category.photos.map((photo, index) => (
+                      <img
+                        key={photo}
+                        src={photo}
+                        alt={`${category.title} project ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <div className="coming-soon">
+                    Photos coming soon.
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+
         <section className="section tinted"><div className="two-col"><div><p className="eyebrow">Why Choose Us</p><h2>Reliable workmanship for commercial project teams.</h2></div><div className="checks">{chooseUs.map(c=><div className="check" key={c}><CheckCircle /> <span>{c}</span></div>)}</div></div></section>
         <section id="industries" className="section center"><p className="eyebrow">Industries We Serve</p><h2>Supporting commercial spaces from rollout to completion.</h2><div className="industries">{industries.map(i=><div key={i}>{i}</div>)}</div></section>
         <section className="section cta"><div className="cta-box"><p className="eyebrow">Ready to Get Started?</p><h2>Taking Your Vision Above and Beyond</h2><p>Whether you're planning a retail rollout, office build-out, millwork package, cabinetry installation, or interior signage project, Astro Vision Installations has the experience and craftsmanship to bring your project to completion.</p><button onClick={() => setQuoteOpen(true)} className="btn">Request a Quote</button><small>The quote button opens a project questionnaire that can be connected to email submissions.</small></div></section>
@@ -131,7 +169,7 @@ function AstroVisionWebsite() {
       alert("Something went wrong. Please call us at (407) 810-9979.");
     }
   }}
-><input type="hidden" name="form-name" value="quote-request"/><div className="form-grid"><input name="company" placeholder="Company Name"/><input name="contact" placeholder="Contact Name"/><input name="phone" placeholder="Phone Number"/><input name="email" placeholder="Email Address" type="email"/></div><input name="location" placeholder="Project Location"/><select name="projectType" defaultValue=""><option value="" disabled>Project Type</option><option>Fixture Installation</option><option>Millwork</option><option>Cabinetry</option><option>Interior Signage, Displays & Graphics</option><option>Finish Carpentry</option><option>Multiple Services</option></select><div className="form-grid"><input name="start" placeholder="Estimated Start Date"/><input name="deadline" placeholder="Completion Deadline"/></div><textarea name="description" placeholder="Project Description"></textarea><textarea name="access" placeholder="Site Access Requirements / Additional Notes"></textarea><label className="upload"><Upload /> Upload Plans, Drawings, Photos, or Scope Documents<input type="file" name="files" multiple /></label><button className="btn">Submit Request</button><small>Form destination: astrovisioninstallations@gmail.com</small></form></div></div>}
+><input type="hidden" name="form-name" value="quote-request"/><div className="form-grid"><input name="company" placeholder="Company Name"/><input name="name" placeholder="Contact Name"/><input name="phone" placeholder="Phone Number"/><input name="email" placeholder="Email Address" type="email"/></div><input name="location" placeholder="Project Location"/><select name="projectType" defaultValue=""><option value="" disabled>Project Type</option><option>Fixture Installation</option><option>Millwork</option><option>Cabinetry</option><option>Interior Signage, Displays & Graphics</option><option>Finish Carpentry</option><option>Multiple Services</option></select><div className="form-grid"><input name="startDate" placeholder="Estimated Start Date"/><input name="deadline" placeholder="Completion Deadline"/></div><textarea name="description" placeholder="Project Description"></textarea><textarea name="notes" placeholder="Site Access Requirements / Additional Notes"></textarea><label className="upload"><Upload /> Upload Plans, Drawings, Photos, or Scope Documents<input type="file" name="files" multiple /></label><button className="btn">Submit Request</button><small>Form destination: astrovisioninstallations@gmail.com</small></form></div></div>}
     </div>
   );
 }
