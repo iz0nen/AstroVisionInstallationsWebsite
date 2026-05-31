@@ -1409,7 +1409,7 @@ textarea:focus {
 }
 
 .team-showcase-card img {
-  width: 90%;
+  width: 70%;
   height: 500px;
   object-fit: cover;
   display: block;
