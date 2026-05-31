@@ -16,7 +16,52 @@ function AstroVisionWebsite() {
   ];
 
   const industries = ["Retail", "Hospitality", "Corporate Offices", "Healthcare", "Education", "Commercial Real Estate", "Developers", "General Contractors", "Property Management"];
-  const projectTypes = ["Retail Rollout", "Corporate Office", "Millwork Installation", "Cabinetry", "Interior Signage", "Finish Carpentry"];
+  <section id="projects" className="section projects">
+  <div className="section-head">
+    <p className="eyebrow">Project Gallery</p>
+    <h2>Featured Work by Category</h2>
+    <p>
+      Explore completed work organized by service category. More project photos will be added as new installations are completed.
+    </p>
+  </div>
+
+  <div className="gallery-categories">
+    {projectCategories.map((category) => (
+      <div className="project-category" key={category.title}>
+        <div className="category-header">
+          <h3>{category.title}</h3>
+          <p>{category.description}</p>
+        </div>
+
+        {category.video && (
+          <video
+            className="project-video"
+            src={category.video}
+            controls
+            muted
+            playsInline
+          />
+        )}
+
+        {category.photos.length > 0 ? (
+          <div className="photo-grid">
+            {category.photos.map((photo, index) => (
+              <img
+                key={photo}
+                src={photo}
+                alt={`${category.title} project ${index + 1}`}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="coming-soon">
+            Photos coming soon.
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+</section>
   const chooseUs = ["Experienced Installation Professionals", "Commercial Construction Expertise", "Reliable Scheduling & Coordination", "Detail-Oriented Craftsmanship", "Safety-Focused Work Practices", "Commitment to Client Satisfaction"];
 
   return (
