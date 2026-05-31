@@ -1141,11 +1141,11 @@ textarea:focus {
 /* FORCE JOIN PAGE TOP TEXT SPACING */
 
 .page-hero.compact {
-  width: 50% !important;
+  width: 100% !important;
   max-width: 1200px !important;
   margin: 0 auto !important;
   padding-left: 0px !important;
-  padding-right: 90px !important;
+  padding-right: 1200px !important;
 }
 
 .page-hero.compact h1,
