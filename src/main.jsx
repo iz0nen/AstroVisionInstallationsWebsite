@@ -61,7 +61,32 @@ function AstroVisionWebsite() {
 
       <footer id="contact" className="footer"><div><img src="/assets/astro-vision-secondary-logo.png" alt="Astro Vision Installations" className="footer-logo" /><h3>Astro Vision Installations</h3><p>Taking Your Vision Above and Beyond</p></div><div className="contact"><a href="tel:4078109979"><Phone /> (407) 810-9979</a><a href="tel:6073425483"><Phone /> (607) 342-5483</a><a href="mailto:astrovisioninstallations@gmail.com"><Mail /> astrovisioninstallations@gmail.com</a></div><div className="foot-note"><p>Commercial fixture, millwork, cabinetry, signage, graphics, and finish carpentry installation services.</p><p>© 2020 Astro Vision Installations. All rights reserved.</p></div></footer>
 
-      {quoteOpen && <div className="modal"><div className="modal-box"><div className="modal-head"><div><p className="eyebrow">Request a Quote</p><h2>Project Questionnaire</h2><p>Submit project details for review and quoting.</p></div><button onClick={() => setQuoteOpen(false)}><X /></button></div><form name="quote-request" method="POST" data-netlify="true" className="quote-form" onSubmit={(e)=>{e.preventDefault(); alert("This preview form is ready to connect. For Vercel, we can connect it through Formspree, Resend, or a Vercel serverless function.");}}><input type="hidden" name="form-name" value="quote-request"/><div className="form-grid"><input name="company" placeholder="Company Name"/><input name="contact" placeholder="Contact Name"/><input name="phone" placeholder="Phone Number"/><input name="email" placeholder="Email Address" type="email"/></div><input name="location" placeholder="Project Location"/><select name="projectType" defaultValue=""><option value="" disabled>Project Type</option><option>Fixture Installation</option><option>Millwork</option><option>Cabinetry</option><option>Interior Signage, Displays & Graphics</option><option>Finish Carpentry</option><option>Multiple Services</option></select><div className="form-grid"><input name="start" placeholder="Estimated Start Date"/><input name="deadline" placeholder="Completion Deadline"/></div><textarea name="description" placeholder="Project Description"></textarea><textarea name="access" placeholder="Site Access Requirements / Additional Notes"></textarea><label className="upload"><Upload /> Upload Plans, Drawings, Photos, or Scope Documents<input type="file" name="files" multiple /></label><button className="btn">Submit Request</button><small>Form destination: astrovisioninstallations@gmail.com</small></form></div></div>}
+      {quoteOpen && <div className="modal"><div className="modal-box"><div className="modal-head"><div><p className="eyebrow">Request a Quote</p><h2>Project Questionnaire</h2><p>Submit project details for review and quoting.</p></div><button onClick={() => setQuoteOpen(false)}><X /></button></div><form
+  className="quote-form"
+  onSubmit={async (e) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    const response = await fetch("/api/quote", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
+      alert("Thank you. Your quote request has been sent.");
+      form.reset();
+      setQuoteOpen(false);
+    } else {
+      alert("Something went wrong. Please call us at (407) 810-9979.");
+    }
+  }}
+><input type="hidden" name="form-name" value="quote-request"/><div className="form-grid"><input name="company" placeholder="Company Name"/><input name="contact" placeholder="Contact Name"/><input name="phone" placeholder="Phone Number"/><input name="email" placeholder="Email Address" type="email"/></div><input name="location" placeholder="Project Location"/><select name="projectType" defaultValue=""><option value="" disabled>Project Type</option><option>Fixture Installation</option><option>Millwork</option><option>Cabinetry</option><option>Interior Signage, Displays & Graphics</option><option>Finish Carpentry</option><option>Multiple Services</option></select><div className="form-grid"><input name="start" placeholder="Estimated Start Date"/><input name="deadline" placeholder="Completion Deadline"/></div><textarea name="description" placeholder="Project Description"></textarea><textarea name="access" placeholder="Site Access Requirements / Additional Notes"></textarea><label className="upload"><Upload /> Upload Plans, Drawings, Photos, or Scope Documents<input type="file" name="files" multiple /></label><button className="btn">Submit Request</button><small>Form destination: astrovisioninstallations@gmail.com</small></form></div></div>}
     </div>
   );
 }
