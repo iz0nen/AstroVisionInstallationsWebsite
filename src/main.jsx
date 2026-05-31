@@ -96,18 +96,18 @@ function AstroVisionWebsite() {
           <section id="services" className="section tinted"><p className="eyebrow">Our Services</p><h2>installation services built around execution.</h2><div className="cards">{services.map(s => <div className="card" key={s.title}><div className="icon">{s.icon}</div><h3>{s.title}</h3><p>{s.text}</p></div>)}</div></section>
 
           <section className="team-showcase">
-  <div className="section-head centered">
-    <p className="eyebrow">Field Experience</p>
+  <div className="field-experience-header">
+  <span className="field-badge">FIELD EXPERIENCE</span>
 
-<h2>Delivering Professional Results Across Every Project</h2>
+  <h2>Delivering Professional Results Across Every Project</h2>
 
-<p>
-  Our team has extensive experience in retail merchandising, fixture
-  installation, shelving systems, store resets, custom build-outs, and
-  commercial rollouts. We focus on quality workmanship, safety, efficiency,
-  and attention to detail from project start to completion.
-</p>
-  </div>
+  <p>
+    Our team has extensive experience in retail merchandising, fixture
+    installation, shelving systems, store resets, custom build-outs,
+    and commercial rollouts. We focus on quality workmanship, safety,
+    efficiency, and attention to detail from project start to completion.
+  </p>
+</div>
 
   <div className="team-showcase-grid">
     <div className="team-showcase-card">
