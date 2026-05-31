@@ -1516,3 +1516,10 @@ textarea:focus {
   font-size: 18px;
   line-height: 1.8;
 }
+.brand-logo img {
+  height: 90px;
+}
+
+.nav-wrap {
+  min-height: 105px;
+}
