@@ -1556,7 +1556,7 @@ textarea:focus {
 
   margin: 0 auto 24px;
 
-  font-size: clamp(42px, 5vw, 64px);
+  font-size: clamp(40px, 5vw, 40px);
   line-height: 1.15;
 
   color: #ffffff;
