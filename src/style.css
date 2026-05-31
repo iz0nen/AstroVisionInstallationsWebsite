@@ -1411,7 +1411,7 @@ textarea:focus {
 .team-showcase-card img {
   width: 70%;
   height: 500px;
-  object-fit: cover;
+  object-fit: center;
   display: block;
 
   transition: transform 0.3s ease;
