@@ -9,23 +9,30 @@ function AstroVisionWebsite() {
   const [page, setPage] = useState("home");
 
   useEffect(() => {
-    const updatePage = () => {
-      const hash = window.location.hash.replace("#", "");
-      if (hash === "gallery" || hash === "join") setPage(hash);
-      else setPage("home");
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    };
-  },
-    useEffect(() => {
+  const updatePage = () => {
+    const hash = window.location.hash.replace("#", "");
+
+    if (hash === "gallery" || hash === "join") {
+      setPage(hash);
+    } else {
+      setPage("home");
+    }
+  };
+
+  updatePage();
+
+  window.addEventListener("hashchange", updatePage);
+
+  return () =>
+    window.removeEventListener("hashchange", updatePage);
+}, []);
+
+useEffect(() => {
   window.scrollTo({
     top: 0,
     behavior: "smooth"
   });
 }, [page]);
-    updatePage();
-    window.addEventListener("hashchange", updatePage);
-    return () => window.removeEventListener("hashchange", updatePage);
-  }, []);
 
   const goTo = (nextPage) => {
     setMenuOpen(false);
