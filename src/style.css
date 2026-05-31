@@ -1523,3 +1523,53 @@ textarea:focus {
 .nav-wrap {
   min-height: 105px;
 }
+/* =========================
+   FIELD EXPERIENCE
+========================= */
+
+.field-experience-header {
+  max-width: 950px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.field-badge {
+  display: inline-block;
+
+  padding: 10px 22px;
+  margin-bottom: 24px;
+
+  border-radius: 999px;
+
+  background: rgba(37,99,235,0.12);
+  border: 1px solid rgba(96,165,250,0.25);
+
+  color: #60a5fa;
+
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.field-experience-header h2 {
+  max-width: 850px;
+
+  margin: 0 auto 24px;
+
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1.15;
+
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.field-experience-header p {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  color: #94a3b8;
+
+  font-size: 18px;
+  line-height: 1.9;
+}
