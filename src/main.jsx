@@ -95,6 +95,34 @@ function AstroVisionWebsite() {
 
           <section id="services" className="section tinted"><p className="eyebrow">Our Services</p><h2>Commercial installation services built around execution.</h2><div className="cards">{services.map(s => <div className="card" key={s.title}><div className="icon">{s.icon}</div><h3>{s.title}</h3><p>{s.text}</p></div>)}</div></section>
 
+          <section className="team-showcase">
+  <div className="section-head centered">
+    <p className="eyebrow">Field Experience</p>
+    <h2>Professional Installation & Merchandising</h2>
+    <p>
+      From retail merchandising and fixture installation to custom build-outs,
+      Astro Vision Installations delivers professional results with attention
+      to detail, safety, and execution.
+    </p>
+  </div>
+
+  <div className="team-showcase-grid">
+    <div className="team-showcase-card">
+      <img
+        src="/assets/corey-working.jpg"
+        alt="Retail merchandising and shelf installation"
+      />
+    </div>
+
+    <div className="team-showcase-card">
+      <img
+        src="/assets/tim-working.jpg"
+        alt="Cabinet and fixture installation"
+      />
+    </div>
+  </div>
+</section>
+          
           <section className="section tinted-dark"><div className="two-col"><div><p className="eyebrow">Why Choose Us</p><h2>Reliable workmanship for commercial project teams.</h2></div><div className="checks">{chooseUs.map(c => <div className="check" key={c}><CheckCircle /> <span>{c}</span></div>)}</div></div></section>
 
           <section id="industries" className="section center"><p className="eyebrow">Industries We Serve</p><h2>Supporting commercial spaces from rollout to completion.</h2><div className="industries">{industries.map(i => <div key={i}>{i}</div>)}</div></section>
