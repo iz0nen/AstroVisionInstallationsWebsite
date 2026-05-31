@@ -1031,7 +1031,7 @@ textarea:focus {
   background: #ffffff !important;
   color: #0f172a !important;
   border-top: 1px solid rgba(15, 23, 42, 0.12) !important;
-  padding: 64px 10px 42px !important;
+  padding: 10px 10px 10px !important;
 
   display: flex !important;
   flex-direction: column !important;
