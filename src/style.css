@@ -1033,3 +1033,34 @@ textarea:focus {
     font-size: 9px;
   }
 }
+/* Uniform navigation buttons */
+
+.nav a {
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #ffffff;
+  font-weight: 900;
+  padding: 11px 22px;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(30, 64, 175, 0.35);
+  border: 1px solid rgba(147, 197, 253, 0.28);
+  transition: 0.2s ease;
+}
+
+.nav a:hover {
+  background: #3b82f6;
+  transform: translateY(-1px);
+  color: #ffffff;
+}
+
+.nav .btn.small {
+  padding: 11px 22px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  border: 1px solid rgba(147, 197, 253, 0.28);
+  box-shadow: 0 12px 28px rgba(30, 64, 175, 0.35);
+}
+
+.nav {
+  gap: 14px;
+}
