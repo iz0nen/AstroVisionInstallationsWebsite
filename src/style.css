@@ -852,3 +852,29 @@ textarea:focus {
     background: linear-gradient(135deg, #3b82f6, #2563eb);
   }
 }
+/* HARD MOBILE NAV OVERRIDE */
+
+@media (max-width: 900px) {
+  .desktop-nav,
+  .nav.desktop-nav,
+  header .desktop-nav,
+  header nav.desktop-nav {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .nav-wrap {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  .menu-btn {
+    display: flex !important;
+  }
+
+  .brand-logo img {
+    height: 44px !important;
+    max-width: 210px !important;
+  }
+}
