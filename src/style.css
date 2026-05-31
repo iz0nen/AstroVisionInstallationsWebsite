@@ -37,7 +37,7 @@ body {
 }
 
 .brand-logo img {
-  height: 72px;
+  height: 80px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -112,8 +112,8 @@ body {
 }
 
 .hero-logo {
-  width: 100%;
-  max-width: 560px;
+  width: 80%;
+  max-width: 540px;
   object-fit: contain;
   height: auto;
   filter: drop-shadow(0 0 35px rgba(59, 130, 246, 0.45));
