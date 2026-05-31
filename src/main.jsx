@@ -88,52 +88,53 @@ function AstroVisionWebsite() {
 
         <section id="services" className="section tinted"><p className="eyebrow">Our Services</p><h2>Commercial installation services built around execution.</h2><div className="cards">{services.map(s => <div className="card" key={s.title}><div className="icon">{s.icon}</div><h3>{s.title}</h3><p>{s.text}</p></div>)}</div></section>
 
-        <section id="projects" className="section projects">
-          <div className="section-head">
-            <div>
-              <p className="eyebrow">Project Gallery</p>
-              <h2>Featured Work by Category</h2>
-            </div>
-            <p>
-              Explore completed work organized by service category. More project photos will be added as new installations are completed.
-            </p>
-          </div>
-
-          <div className="gallery-categories">
-            {projectCategories.map((category) => (
-              <div className="project-category" key={category.title}>
-                <div className="category-header">
-                  <h3>{category.title}</h3>
-                  <p>{category.description}</p>
-                </div>
-
-                {category.video && (
-                  <video
-                    className="project-video"
-                    src={category.video}
-                    controls
-                    muted
-                    playsInline
-                  />
-                )}
-
-                {category.photos.length > 0 ? (
-                  <div className="photo-grid">
-                    {category.photos.map((photo, index) => (
-                      <img
-                        key={photo}
-                        src={photo}
-                        alt={`${category.title} project ${index + 1}`}
-                      />
-                    ))}
-                  </div>
-                ) : (
-                  <div className="coming-soon">
-                    Photos coming soon.
-                  </div>
-                )}
+        <section id="projects" className="projects-showcase">
+          <div className="projects-inner">
+            <div className="section-head projects-head">
+              <div>
+                <p className="eyebrow">Project Gallery</p>
+                <h2>Featured Work by Category</h2>
               </div>
-            ))}
+              <p>
+                Explore completed work organized by service category. More project photos will be added as new installations are completed.
+              </p>
+            </div>
+
+            <div className="retail-feature">
+              <div className="category-header">
+                <p className="eyebrow">Featured Category</p>
+                <h3>Retail Rollout</h3>
+                <p>
+                  Retail fixture installation, shelving systems, store setup, merchandising displays, and rollout support for commercial retail environments.
+                </p>
+              </div>
+
+              <video
+                className="retail-video"
+                src="/assets/retail-rollout-walkthrough.mp4"
+                controls
+                muted
+                playsInline
+              />
+
+              <div className="retail-photo-grid">
+                <img src="/assets/retail-rollout-1.jpg" alt="Retail rollout project 1" />
+                <img src="/assets/retail-rollout-2.jpg" alt="Retail rollout project 2" />
+                <img src="/assets/retail-rollout-3.jpg" alt="Retail rollout project 3" />
+              </div>
+            </div>
+
+            <div className="coming-categories">
+              {projectCategories
+                .filter((category) => category.title !== "Retail Rollout")
+                .map((category) => (
+                  <div className="coming-card" key={category.title}>
+                    <h3>{category.title}</h3>
+                    <p>{category.description}</p>
+                    <div className="coming-soon">Photos coming soon.</div>
+                  </div>
+                ))}
+            </div>
           </div>
         </section>
 
@@ -173,5 +174,7 @@ function AstroVisionWebsite() {
     </div>
   );
 }
+
+createRoot(document.getElementById("root")).render(<AstroVisionWebsite />);
 
 createRoot(document.getElementById("root")).render(<AstroVisionWebsite />);
