@@ -95,7 +95,7 @@ body {
 
 .hero-inner {
   position: relative;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: auto;
   text-align: center;
   padding: 72px 24px 96px;
@@ -112,8 +112,8 @@ body {
 }
 
 .hero-logo {
-  width: 75%;
-  max-width: 540px;
+  width: 70%;
+  max-width: 500px;
   object-fit: contain;
   height: auto;
   filter: drop-shadow(0 0 35px rgba(59, 130, 246, 0.45));
