@@ -749,3 +749,25 @@ textarea:focus {
   gap: 14px !important;
 }
 }
+.nav-pill {
+  appearance: none;
+  border: 1px solid rgba(147, 197, 253, 0.35);
+  border-radius: 999px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(30, 64, 175, 0.35);
+  transition: all 0.25s ease;
+}
+
+.nav-pill:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.nav-pill-primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
