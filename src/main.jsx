@@ -169,7 +169,7 @@ useEffect(() => {
       <div className="section-head simple">
         <div>
           <p className="eyebrow">Completed Projects</p>
-          <h2>Commercial Installation Work</h2>
+          <h2>Installation Work</h2>
         </div>
       </div>
 
@@ -223,7 +223,7 @@ useEffect(() => {
 
       {page === "join" && (
         <main>
-          <section className="page-hero compact"><p className="eyebrow">Join Our Team</p><h1>Build With Astro Vision Installations</h1><p>We are looking for dependable, detail-oriented professionals interested in commercial fixture installation, millwork, cabinetry, signage, graphics, and finish carpentry projects.</p></section>
+          <section className="page-hero compact"><p className="eyebrow">Join Our Team</p><h1>Build With Astro Vision Installations</h1><p>We are looking for dependable, detail-oriented professionals interested in commercial fixture installation, millwork, cabinetry, signage, graphics, rough and finish carpentry projects.</p></section>
           <section className="section join-section"><div className="two-col join-layout"><div><p className="eyebrow">Now Accepting Applications</p><h2>Apply to work with us.</h2><p className="join-copy">Complete the application below and your information will be sent directly to Astro Vision Installations for review.</p><div className="join-highlights"><div><CheckCircle /> Commercial project experience preferred</div><div><CheckCircle /> Dependability and attention to detail required</div><div><CheckCircle /> Travel availability is a plus</div><div><CheckCircle /> Tools and transportation preferred</div></div></div>
             <form className="application-form" onSubmit={async (e) => { e.preventDefault(); const form=e.currentTarget; const data=Object.fromEntries(new FormData(form).entries()); const response=await fetch("/api/application",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)}); if(response.ok){alert("Thank you. Your application has been sent."); form.reset();} else {alert("Something went wrong. Please email astrovisioninstallations@gmail.com.");}}}>
               <div className="form-grid"><input name="firstName" placeholder="First Name" required /><input name="lastName" placeholder="Last Name" required /><input name="phone" placeholder="Phone Number" required /><input name="email" placeholder="Email Address" type="email" required /></div>
