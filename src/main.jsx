@@ -104,22 +104,54 @@ function AstroVisionWebsite() {
       )}
 
       {page === "gallery" && (
-        <main>
-          <section className="page-hero compact"><p className="eyebrow">Project Gallery</p><h1>Featured Work by Category</h1><p>A growing portfolio of retail rollouts, millwork, cabinetry, interior signage, displays, graphics, and finish carpentry installations.</p></section>
-          <section className="gallery-page">
-            <article className="retail-showcase">
-              <div className="gallery-title-row"><div><p className="eyebrow">Featured Category</p><h2>Retail Rollout</h2></div><p>Retail fixture installation, shelving systems, store setup, merchandising displays, and rollout support for commercial retail environments.</p></div>
-              <video className="retail-video" src="/assets/retail-rollout-walkthrough.mp4" controls muted playsInline />
-              <div className="retail-photo-grid">
-                <img src="/assets/retail-rollout-1.jpg" alt="Retail rollout project photo 1" />
-                <img src="/assets/retail-rollout-2.jpg" alt="Retail rollout project photo 2" />
-                <img src="/assets/retail-rollout-3.jpg" alt="Retail rollout project photo 3" />
-              </div>
-            </article>
-            <section className="future-gallery"><div className="section-head simple"><div><p className="eyebrow">More Categories</p><h2>Additional project photos coming soon.</h2></div></div><div className="coming-grid">{futureCategories.map(c => <div className="coming-card" key={c}><h3>{c}</h3><p>Photos coming soon.</p></div>)}</div></section>
-          </section>
-        </main>
-      )}
+  <main className="gallery-page">
+    <section className="gallery-hero">
+      <p className="eyebrow">Project Gallery</p>
+      <h1>Completed Commercial Installation Projects</h1>
+      <p>
+        Explore a selection of completed retail rollout and commercial installation work by Astro Vision Installations. 
+        Our projects highlight fixture installation, merchandising displays, shelving systems, interior build-outs, and 
+        professional execution for commercial environments.
+      </p>
+    </section>
+
+    <section className="completed-projects">
+      <div className="section-head simple">
+        <div>
+          <p className="eyebrow">Completed Projects</p>
+          <h2>Retail Rollout Installation Work</h2>
+        </div>
+        <p>
+          Photos from completed commercial retail installation projects, including fixture systems, shelving, displays, and store setup.
+        </p>
+      </div>
+
+      <div className="photo-grid gallery-overview-grid">
+        <img src="/assets/retail-rollout-1.jpg" alt="Retail rollout completed project photo 1" />
+        <img src="/assets/retail-rollout-2.jpg" alt="Retail rollout completed project photo 2" />
+        <img src="/assets/retail-rollout-3.jpg" alt="Retail rollout completed project photo 3" />
+      </div>
+
+      <div className="gallery-video-section">
+        <div className="video-intro">
+          <p className="eyebrow">Project Walkthrough</p>
+          <h2>Retail Rollout Video Overview</h2>
+          <p>
+            A walkthrough look at commercial retail fixture installation and project execution in progress.
+          </p>
+        </div>
+
+        <video
+          className="retail-video"
+          src="/assets/retail-rollout-walkthrough.mp4"
+          controls
+          muted
+          playsInline
+        />
+      </div>
+    </section>
+  </main>
+)}
 
       {page === "join" && (
         <main>
