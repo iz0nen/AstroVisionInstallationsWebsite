@@ -1379,29 +1379,49 @@ textarea:focus {
    TEAM SHOWCASE
 ========================= */
 
+/* =========================
+   TEAM SHOWCASE
+========================= */
+
+.team-showcase {
+  max-width: 1500px;
+  margin: 100px auto;
+  padding: 0 40px;
+}
+
+.team-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
 .team-showcase-card {
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 28px;
+
+  padding: 20px;
+
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+
   display: flex;
   justify-content: center;
   align-items: center;
-
-  height: 500px;
-  overflow: hidden;
-
-  border-radius: 28px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.3);
 }
 
 .team-showcase-card img {
-  max-width: 90%;
-  max-height: 90%;
+  width: 100%;
+  height: 500px;
 
-  width: auto;
-  height: auto;
+  object-fit: cover;
+  object-position: center;
 
-  object-fit: contain;
-  display: block;
+  border-radius: 18px;
 
   transition: transform 0.3s ease;
 }
