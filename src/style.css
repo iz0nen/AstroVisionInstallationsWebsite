@@ -878,3 +878,148 @@ textarea:focus {
     max-width: 210px !important;
   }
 }
+/* =========================
+   ABOUT + SERVICES POLISH
+========================= */
+
+/* Remove secondary logo above About Us */
+.about-logo {
+  display: none !important;
+}
+
+/* Professional About Us section */
+.about {
+  max-width: 1200px;
+  text-align: center;
+}
+
+.about .two-col {
+  display: block;
+}
+
+.about .eyebrow {
+  margin-bottom: 12px;
+}
+
+.about h2 {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about .copy {
+  max-width: 980px;
+  margin: 36px auto 0;
+  padding: 42px;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.18), transparent 34%),
+    linear-gradient(145deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025));
+  border: 1px solid rgba(147, 197, 253, 0.18);
+  box-shadow: 0 26px 80px rgba(0,0,0,0.32);
+}
+
+.about .copy p {
+  color: #cbd5e1;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.about .copy p:last-child {
+  margin-bottom: 0;
+}
+
+/* More professional services section */
+#services {
+  text-align: center;
+}
+
+#services > .eyebrow,
+#services > h2 {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#services .cards {
+  margin-top: 52px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+}
+
+#services .card {
+  min-height: 330px;
+  padding: 34px 24px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top right, rgba(37,99,235,0.20), transparent 38%),
+    linear-gradient(145deg, #0d1320, #07101f);
+  border: 1px solid rgba(147,197,253,0.18);
+  box-shadow: 0 18px 48px rgba(0,0,0,0.28);
+}
+
+#services .card::after {
+  content: "";
+  position: absolute;
+  inset: auto 24px 0 24px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+  opacity: 0;
+  transition: 0.25s ease;
+}
+
+#services .card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(96,165,250,0.65);
+}
+
+#services .card:hover::after {
+  opacity: 1;
+}
+
+#services .icon {
+  height: 64px;
+  width: 64px;
+  border-radius: 22px;
+  background: rgba(37,99,235,0.22);
+  border: 1px solid rgba(147,197,253,0.28);
+  box-shadow: inset 0 0 20px rgba(37,99,235,0.12);
+}
+
+#services .card h3 {
+  font-size: 21px;
+  line-height: 1.25;
+  margin-top: 26px;
+}
+
+#services .card p {
+  color: #b8c4d8;
+  line-height: 1.75;
+}
+
+/* Responsive services layout */
+@media (max-width: 1300px) {
+  #services .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .about .copy {
+    padding: 26px;
+  }
+
+  .about .copy p {
+    font-size: 16px;
+  }
+
+  #services .cards {
+    grid-template-columns: 1fr;
+  }
+
+  #services .card {
+    min-height: auto;
+  }
+}
