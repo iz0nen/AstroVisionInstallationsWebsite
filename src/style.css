@@ -1140,7 +1140,7 @@ textarea:focus {
 
 .page-hero.compact {
   width: 100% !important;
-  max-width: 1200px !important;
+  max-width: 600px !important;
   margin: 0 auto !important;
   padding-left: 0px !important;
   padding-right: 150px !important;
