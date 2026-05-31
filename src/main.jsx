@@ -98,12 +98,15 @@ function AstroVisionWebsite() {
           <section className="team-showcase">
   <div className="section-head centered">
     <p className="eyebrow">Field Experience</p>
-    <h2>Professional Installation</h2>
-    <p>
-      From retail merchandising and fixture installation to custom build-outs,
-      Astro Vision Installations delivers professional results with attention
-      to detail, safety, and execution.
-    </p>
+
+<h2>Delivering Professional Results Across Every Project</h2>
+
+<p>
+  Our team has extensive experience in retail merchandising, fixture
+  installation, shelving systems, store resets, custom build-outs, and
+  commercial rollouts. We focus on quality workmanship, safety, efficiency,
+  and attention to detail from project start to completion.
+</p>
   </div>
 
   <div className="team-showcase-grid">
