@@ -194,7 +194,6 @@ useEffect(() => {
     
     <img src="/assets/Signage nike 1.jpg" alt="Nike retail project" />
     <img src="/assets/Signage nike 2.jpg" alt="Nike womens display" />
-    <img src="/assets/Signage nike 3.jpg" alt="Nike kids department" />
 
     
 
