@@ -771,3 +771,16 @@ textarea:focus {
 .nav-pill-primary {
   background: linear-gradient(135deg, #2563eb, #1d4ed8);
 }
+.brand-logo img {
+  height: 58px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 0 16px rgba(59,130,246,0.35));
+}
+
+@media (max-width: 700px) {
+  .brand-logo img {
+    height: 42px;
+  }
+}
