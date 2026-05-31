@@ -110,7 +110,7 @@ function AstroVisionWebsite() {
       <h1>Completed Commercial Installation Projects</h1>
       <p>
         Explore a selection of completed retail rollout and commercial installation work by Astro Vision Installations. 
-        Our projects highlight fixture installation, merchandising displays, shelving systems, interior build-outs, and 
+        Our projects highlight fixture installation, merchandising displays, shelving systems, Interior Signage and Graphics, interior build-outs, Millwork, Desks, Cashwraps, Cabinetry, and 
         professional execution for commercial environments.
       </p>
     </section>
