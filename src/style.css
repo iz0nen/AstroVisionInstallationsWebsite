@@ -1133,7 +1133,7 @@ textarea:focus {
   }
 }
 .join-page {
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 10 auto;
   padding: 80px 60px 110px;
 }
