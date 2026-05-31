@@ -126,9 +126,9 @@ function AstroVisionWebsite() {
   </div>
 </section>
           
-          <section className="section tinted-dark"><div className="two-col"><div><p className="eyebrow">Why Choose Us</p><h2>Reliable workmanship for commercial project teams.</h2></div><div className="checks">{chooseUs.map(c => <div className="check" key={c}><CheckCircle /> <span>{c}</span></div>)}</div></div></section>
+          <section className="section tinted-dark"><div className="two-col"><div><p className="eyebrow">Why Choose Us</p><h2>Reliable Workmanship for Commercial Project Teams.</h2></div><div className="checks">{chooseUs.map(c => <div className="check" key={c}><CheckCircle /> <span>{c}</span></div>)}</div></div></section>
 
-          <section id="industries" className="section center"><p className="eyebrow">Industries We Serve</p><h2>Supporting commercial spaces from rollout to completion.</h2><div className="industries">{industries.map(i => <div key={i}>{i}</div>)}</div></section>
+          <section id="industries" className="section center"><p className="eyebrow">Industries We Serve</p><h2>Supporting Commercial Spaces From Rollout to Completion.</h2><div className="industries">{industries.map(i => <div key={i}>{i}</div>)}</div></section>
 
           <section className="section cta"><div className="cta-box"><p className="eyebrow">Ready to Get Started?</p><h2>Taking Your Vision Above and Beyond</h2><p>Whether you're planning a retail rollout, office build-out, millwork package, cabinetry installation, or interior signage project, Astro Vision Installations has the experience and craftsmanship to bring your project to completion.</p><div className="actions"><button onClick={() => setQuoteOpen(true)} className="btn">Request a Quote</button><button onClick={() => goTo("gallery")} className="btn secondary">View Our Work</button></div></div></section>
         </main>
