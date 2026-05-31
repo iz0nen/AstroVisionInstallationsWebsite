@@ -37,8 +37,8 @@ body {
 }
 
 .brand-logo img {
-  height: 200px;
-  width: auto;
+  height: auto;
+  width: 200px;
   display: block;
   object-fit: contain;
   filter: drop-shadow(0 0 16px rgba(59,130,246,0.35));
