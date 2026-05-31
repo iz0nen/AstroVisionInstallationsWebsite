@@ -1045,9 +1045,9 @@ textarea:focus {
 }
 
 .footer-logo {
-  height: 80px !important;
+  height: 100px !important;
   width: auto !important;
-  margin: 0 auto 16px !important;
+  margin: 0 auto 0px !important;
   display: block !important;
   filter: drop-shadow(0 8px 18px rgba(15, 23, 42, 0.18));
 }
