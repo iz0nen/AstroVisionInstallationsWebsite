@@ -1136,8 +1136,30 @@ textarea:focus {
    JOIN OUR TEAM PAGE PADDING
 ========================= */
 
+/* =========================
+   JOIN OUR TEAM PAGE SPACING
+========================= */
+
 .join-section {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 80px 80px;
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+}
+
+.join-layout {
+  gap: 60px !important;
+}
+
+.join-layout > div:first-child {
+  padding-left: 20px;
+}
+
+@media (max-width: 900px) {
+  .join-section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .join-layout > div:first-child {
+    padding-left: 0;
+  }
 }
