@@ -136,15 +136,20 @@ function AstroVisionWebsite() {
 
       {page === "gallery" && (
   <main className="gallery-page">
-    <section className="gallery-hero">
-      <p className="eyebrow">Project Gallery</p>
-      <h1>Completed Commercial Installation Projects</h1>
-      <p>
-        Explore a selection of completed retail rollout and commercial installation work by Astro Vision Installations. 
-        Our projects highlight fixture installation, merchandising displays, shelving systems, Interior Signage and Graphics, interior build-outs, Millwork, Desks, Cashwraps, Cabinetry, and 
-        professional execution for commercial environments.
-      </p>
-    </section>
+    <section className="gallery-intro">
+  <span className="eyebrow">PROJECT PORTFOLIO</span>
+
+  <h1>Completed Projects Across Multiple Industries</h1>
+
+  <p>
+    Astro Vision Installations specializes in retail rollouts,
+    fixture installation, merchandising, signage installation,
+    custom build-outs, and commercial renovation support.
+    Our gallery showcases a selection of completed projects
+    demonstrating quality workmanship, precision, and attention
+    to detail.
+  </p>
+</section>
 
     <section className="completed-projects">
       <div className="section-head simple">
