@@ -43,11 +43,22 @@ function AstroVisionWebsite() {
         <div className="nav-wrap">
           <a href="#home" className="brand text-brand">Astro Vision Installations</a>
           <nav className="nav desktop-nav">
-            <button onClick={() => goTo("home")} className={page === "home" ? "active" : ""}>Home</button>
-            <button onClick={() => goTo("gallery")} className={page === "gallery" ? "active" : ""}>Project Gallery</button>
-            <button onClick={() => goTo("join")} className={page === "join" ? "active" : ""}>Join Our Team</button>
-            <button onClick={() => setQuoteOpen(true)} className="btn small">Request a Quote</button>
-          </nav>
+  <button className="nav-pill" onClick={() => setPage("home")}>
+    Home
+  </button>
+
+  <button className="nav-pill" onClick={() => setPage("gallery")}>
+    Project Gallery
+  </button>
+
+  <button className="nav-pill" onClick={() => setPage("careers")}>
+    Join Our Team
+  </button>
+
+  <button className="nav-pill nav-pill-primary" onClick={() => setQuoteOpen(true)}>
+    Request a Quote
+  </button>
+</nav>
           <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</button>
         </div>
         {menuOpen && (
