@@ -1136,30 +1136,28 @@ textarea:focus {
    JOIN OUR TEAM PAGE PADDING
 ========================= */
 
-/* =========================
-   JOIN OUR TEAM PAGE SPACING
-========================= */
+/* FORCE JOIN PAGE TEXT SPACING */
 
-.join-section {
-  padding-left: 60px !important;
-  padding-right: 60px !important;
+main .join-section .join-layout {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 80px !important;
+  padding-right: 80px !important;
 }
 
-.join-layout {
-  gap: 60px !important;
-}
-
-.join-layout > div:first-child {
-  padding-left: 20px;
+main .join-section .join-layout > div:first-child {
+  padding-left: 40px !important;
 }
 
 @media (max-width: 900px) {
-  .join-section {
+  main .join-section .join-layout {
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
 
-  .join-layout > div:first-child {
-    padding-left: 0;
+  main .join-section .join-layout > div:first-child {
+    padding-left: 0 !important;
   }
 }
