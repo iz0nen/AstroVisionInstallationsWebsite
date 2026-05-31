@@ -1405,25 +1405,25 @@ textarea:focus {
 
   border: 1px solid rgba(255,255,255,0.1);
 
-  box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+  box-shadow: 10 25px 10px rgba(0,0,0,0.3);
 }
 
 .team-showcase-card img {
   width: 70%;
   height: 500px;
-  object-fit: center;
+  object-fit: cover;
   display: block;
 
   transition: transform 0.3s ease;
 }
 
 .team-showcase-card:hover img {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .team-showcase {
-    padding: 0 20px;
+    padding: 5px 5px;
   }
 
   .team-showcase-grid {
