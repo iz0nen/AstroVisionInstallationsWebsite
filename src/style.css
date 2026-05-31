@@ -706,3 +706,28 @@ textarea:focus {
     font-size: 16px;
   }
 }
+/* Fix skinny gallery images */
+
+.photo-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  width: 100% !important;
+}
+
+.photo-grid img {
+  width: 100% !important;
+  height: 380px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+.project-category {
+  max-width: 1500px !important;
+  margin: 0 auto !important;
+}
+
+#projects {
+  max-width: 1600px !important;
+}
