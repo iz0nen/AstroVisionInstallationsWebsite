@@ -1136,28 +1136,24 @@ textarea:focus {
    JOIN OUR TEAM PAGE PADDING
 ========================= */
 
-/* FORCE JOIN PAGE TEXT SPACING */
+/* FORCE JOIN PAGE TOP TEXT SPACING */
 
-main .join-section .join-layout {
+.page-hero.compact {
   width: 100% !important;
   max-width: 1200px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 80px !important;
-  padding-right: 80px !important;
+  margin: 0 auto !important;
+  padding-left: 90px !important;
+  padding-right: 90px !important;
 }
 
-main .join-section .join-layout > div:first-child {
-  padding-left: 40px !important;
+.page-hero.compact h1,
+.page-hero.compact p {
+  max-width: 900px !important;
 }
 
 @media (max-width: 900px) {
-  main .join-section .join-layout {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-
-  main .join-section .join-layout > div:first-child {
-    padding-left: 0 !important;
+  .page-hero.compact {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
   }
 }
