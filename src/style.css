@@ -1142,8 +1142,8 @@ textarea:focus {
   width: 100% !important;
   max-width: 1200px !important;
   margin: 0 auto !important;
-  padding-left: 90px !important;
-  padding-right: 90px !important;
+  padding-left: 60px !important;
+  padding-right: 60px !important;
 }
 
 .page-hero.compact h1,
