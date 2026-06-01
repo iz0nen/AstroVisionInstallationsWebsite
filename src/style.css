@@ -1510,3 +1510,19 @@ textarea:focus {
     pointer-events: auto !important;
   }
 }
+/* FORCE HIDE MOBILE HAMBURGER ON DESKTOP */
+
+@media (min-width: 901px) {
+  button[aria-label*="menu"],
+  button[aria-label*="Menu"],
+  button[class*="menu"],
+  button[class*="Menu"],
+  .menu-btn,
+  .mobile-menu-btn,
+  .mobile-nav-toggle,
+  .hamburger,
+  .hamburger-btn {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
