@@ -1724,3 +1724,34 @@ textarea:focus {
 .mobile-nav {
   display: none;
 }
+/* FINAL RESPONSIVE NAV FIX */
+
+/* Desktop */
+.mobile-nav,
+.menu-btn {
+  display: none !important;
+}
+
+.desktop-nav {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .desktop-nav,
+  .nav.desktop-nav {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .menu-btn {
+    display: flex !important;
+  }
+
+  .mobile-nav {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
