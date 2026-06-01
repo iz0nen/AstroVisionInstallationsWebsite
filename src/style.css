@@ -759,46 +759,45 @@ textarea:focus {
 .nav-pill {
   background: linear-gradient(
     135deg,
-    #0f2d63,
-    #163b87
+    #0b214d,
+    #13387d
   );
 
-  color: #ffffff;
+  color: white;
 
-  border: 1px solid rgba(96,165,250,0.18);
+  border: 1px solid rgba(255,255,255,0.08);
 
   border-radius: 999px;
 
-  padding: 14px 30px;
+  padding: 12px 22px;
 
-  min-width: 165px;
+  min-width: 140px;
 
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 600;
 
   cursor: pointer;
 
-  transition: all 0.3s ease;
+  transition: all .25s ease;
 
   box-shadow:
-    0 10px 24px rgba(5,15,35,0.45),
-    0 0 0 1px rgba(255,255,255,0.04) inset;
+    0 8px 20px rgba(0,0,0,.35),
+    0 0 20px rgba(29,78,216,.12);
 }
 
 .nav-pill:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 
   background: linear-gradient(
     135deg,
     #163b87,
-    #1d4ed8
+    #2563eb
   );
 
   box-shadow:
-    0 18px 35px rgba(29,78,216,0.35);
+    0 12px 28px rgba(37,99,235,.35);
 }
-
-.nav-pill.active {
+/*.nav-pill.active {
   background: linear-gradient(
     135deg,
     #1d4ed8,
@@ -810,7 +809,7 @@ textarea:focus {
 
   box-shadow:
     0 0 25px rgba(59,130,246,0.50);
-}
+}*/
 .brand-logo img {
   height: 58px;
   width: auto;
