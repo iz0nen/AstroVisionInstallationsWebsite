@@ -797,7 +797,7 @@ textarea:focus {
   box-shadow:
     0 12px 28px rgba(37,99,235,.35);
 }
-/*.nav-pill.active {
+.nav-pill.active {
   background: linear-gradient(
     135deg,
     #1d4ed8,
@@ -809,7 +809,7 @@ textarea:focus {
 
   box-shadow:
     0 0 25px rgba(59,130,246,0.50);
-}*/
+}
 .brand-logo img {
   height: 58px;
   width: auto;
@@ -932,7 +932,7 @@ textarea:focus {
 }
 /* HARD MOBILE NAV OVERRIDE */
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
 
   .desktop-nav {
     display: none;
@@ -952,7 +952,7 @@ textarea:focus {
     height: 44px !important;
     max-width: 210px !important;
   }
-}
+}*/
 /* =========================
    ABOUT + SERVICES POLISH
 ========================= */
