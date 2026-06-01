@@ -1598,8 +1598,8 @@ textarea:focus {
 }
 
 .team-showcase-card {
-  width: 50% !important;
-  max-width: 200px !important;
+  width: 80% !important;
+  max-width: 500px !important;
   padding: 6px !important;
   margin: 0 auto !important;
 
