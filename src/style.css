@@ -752,40 +752,53 @@ textarea:focus {
   gap: 14px !important;
 }
 }
+/* =========================
+   DESKTOP NAVIGATION
+========================= */
+
 .nav-pill {
   background: linear-gradient(
     135deg,
-    #12306f,
-    #1d4ed8
+    #0f2d63,
+    #163b87
   );
 
   color: #ffffff;
 
-  border: 1px solid rgba(96,165,250,0.25);
+  border: 1px solid rgba(96,165,250,0.18);
 
   border-radius: 999px;
 
   padding: 14px 30px;
 
+  min-width: 165px;
+
   font-size: 15px;
   font-weight: 700;
 
-  text-decoration: none;
   cursor: pointer;
 
   transition: all 0.3s ease;
 
   box-shadow:
-    0 8px 20px rgba(29,78,216,0.30),
-    inset 0 1px 0 rgba(255,255,255,0.08);
-
-  min-width: 160px;
-  text-align: center;
+    0 10px 24px rgba(5,15,35,0.45),
+    0 0 0 1px rgba(255,255,255,0.04) inset;
 }
 
 .nav-pill:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 
+  background: linear-gradient(
+    135deg,
+    #163b87,
+    #1d4ed8
+  );
+
+  box-shadow:
+    0 18px 35px rgba(29,78,216,0.35);
+}
+
+.nav-pill.active {
   background: linear-gradient(
     135deg,
     #1d4ed8,
@@ -793,16 +806,8 @@ textarea:focus {
   );
 
   box-shadow:
-    0 12px 28px rgba(37,99,235,0.45);
+    0 0 30px rgba(59,130,246,0.45);
 }
-
-.nav-pill.active {
-  background: linear-gradient(
-    135deg,
-    #2563eb,
-    #3b82f6
-  );
-
   box-shadow:
     0 0 25px rgba(59,130,246,0.50);
 }
