@@ -1565,3 +1565,23 @@ textarea:focus {
 .team-showcase-card:hover img {
   transform: scale(1.015);
 }
+/* =========================
+   INFO SECTION HOVER EFFECTS
+========================= */
+
+.about,
+.tinted-dark,
+.center {
+  transition: all 0.25s ease;
+}
+
+.about:hover,
+.tinted-dark:hover,
+.center:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(96,165,250,0.65);
+
+  box-shadow:
+    0 20px 55px rgba(37,99,235,0.28);
+}
