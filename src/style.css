@@ -933,24 +933,21 @@ textarea:focus {
 }
 /* HARD MOBILE NAV OVERRIDE */
 
-@media (max-width: 900px) {
-  .desktop-nav,
-  .nav.desktop-nav,
-  header .desktop-nav,
-  header nav.desktop-nav {
-    display: none !important;
-    visibility: hidden !important;
+@media (max-width: 768px) {
+
+  .desktop-nav {
+    display: none;
   }
 
-  .nav-wrap {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
+  .mobile-menu-btn {
+    display: flex;
   }
 
-  .menu-btn {
-    display: flex !important;
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
   }
+}
 
   .brand-logo img {
     height: 44px !important;
@@ -1720,4 +1717,9 @@ textarea:focus {
 .project-grid img:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 40px rgba(37,99,235,0.25);
+}
+.mobile-menu-btn,
+.mobile-menu,
+.mobile-nav {
+  display: none;
 }
