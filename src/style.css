@@ -1588,19 +1588,94 @@ textarea:focus {
    INFO SECTION HOVER EFFECTS
 ========================= */
 
-.section about,
-.section tinted-dark,
-.section center {
-  transition: all 0.25s ease;
+/* Make home showcase cards hug the photos tighter */
+.team-showcase-grid {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  gap: 36px !important;
+  flex-wrap: wrap !important;
 }
 
-.section about:hover,
-.section tinted-dark:hover,
-.section center:hover {
-  transform: translateY(-6px);
+.team-showcase-card {
+  width: fit-content !important;
+  max-width: none !important;
+  padding: 6px !important;
+  margin: 0 auto !important;
 
-  border-color: rgba(96,165,250,0.65);
+  border-radius: 24px !important;
+  background:
+    radial-gradient(circle at top right, rgba(37,99,235,0.16), transparent 36%),
+    linear-gradient(145deg, #0d1320, #07101f) !important;
 
-  box-shadow:
-    0 20px 55px rgba(37,99,235,0.28);
+  border: 1px solid rgba(147,197,253,0.18) !important;
+  box-shadow: 0 18px 48px rgba(0,0,0,0.28) !important;
+
+  transition: all 0.25s ease !important;
+}
+
+.team-showcase-card img {
+  display: block !important;
+  width: auto !important;
+  height: 420px !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+  border-radius: 18px !important;
+  transition: transform 0.25s ease !important;
+}
+
+.team-showcase-card:hover {
+  transform: translateY(-6px) !important;
+  border-color: rgba(96,165,250,0.65) !important;
+  box-shadow: 0 20px 55px rgba(37,99,235,0.28) !important;
+}
+
+.team-showcase-card:hover img {
+  transform: scale(1.015) !important;
+}
+
+/* About Us hover */
+.about .copy {
+  transition: all 0.25s ease !important;
+}
+
+.about .copy:hover {
+  transform: translateY(-6px) !important;
+  border-color: rgba(96,165,250,0.65) !important;
+  box-shadow: 0 20px 55px rgba(37,99,235,0.28) !important;
+}
+
+/* Why Choose Us hover */
+.check {
+  transition: all 0.25s ease !important;
+}
+
+.check:hover {
+  transform: translateY(-4px) !important;
+  border-color: rgba(96,165,250,0.65) !important;
+  box-shadow: 0 18px 45px rgba(37,99,235,0.24) !important;
+}
+
+/* Industries hover */
+.industries div {
+  transition: all 0.25s ease !important;
+}
+
+.industries div:hover {
+  transform: translateY(-4px) !important;
+  border-color: rgba(96,165,250,0.65) !important;
+  box-shadow: 0 18px 45px rgba(37,99,235,0.24) !important;
+}
+
+/* Mobile keeps the photos clean */
+@media (max-width: 900px) {
+  .team-showcase-grid {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .team-showcase-card img {
+    width: 100% !important;
+    height: auto !important;
+  }
 }
