@@ -1531,12 +1531,12 @@ textarea:focus {
 ========================= */
 
 .team-showcase-grid {
-  gap: 28px;
+  gap: 20px;
 }
 
 .team-showcase-card {
   padding: 10px;
-  border-radius: 24px;
+  border-radius: 10px;
 
   background:
     radial-gradient(circle at top right, rgba(37,99,235,0.16), transparent 36%),
