@@ -100,16 +100,21 @@ useEffect(() => {
               <div className="hero-logo-card"><img src="/assets/astro-vision-main-logo.jpg" alt="Astro Vision Installations main logo" className="hero-logo" /></div>
               <p className="eyebrow">Commercial Installation Contractor</p>
               <h1>Astro Vision Installations</h1>
-              <p className="tagline">Taking Your Vision Above and Beyond</p>
+              <p className="tagline">Bringing Your Vision Above and Beyond Expectations.</p>
               <p className="service-line">Professional Fixture Installation • Millwork • Cabinetry • Interior Signage, Displays & Graphics • Finish Carpentry</p>
-              <p className="summary">Delivering quality installation services for commercial, retail, hospitality, healthcare, education, and corporate environments.</p>
+              <p className="summary">Delivering quality installation services</p>
               <div className="actions"><button onClick={() => setQuoteOpen(true)} className="btn">Request a Quote</button><button onClick={() => goTo("gallery")} className="btn secondary">View Project Gallery</button></div>
             </div>
           </section>
 
           <section className="section about">
             <img src="/assets/astro-vision-secondary-logo.png" alt="Astro Vision Installations secondary logo" className="about-logo" />
-            <div className="two-col"><div><p className="eyebrow">About Us</p><h2>Bringing Concepts to Completion</h2></div><div className="copy"><p>At Astro Vision Installations, we transform plans, designs, and ideas into finished spaces through expert installation and craftsmanship.</p><p>From retail fixtures and custom millwork to cabinetry, interior signage, displays, graphics, and finish carpentry, we bring reliability, attention to detail, and professionalism to every project.</p><p>We partner with general contractors, developers, retailers, facility managers, and commercial property owners to ensure projects are completed safely, efficiently, and to the highest standards.</p></div></div>
+            <div className="two-col"><div><p className="eyebrow">About Us</p></h2><h2>Bringing Visions to Life Through Precision, Partnership, and Outstanding Performance</h2><h2>Concepts to Completion</h2></div><div className="copy">
+              <p>At Astro Vision Installations, we believe every successful project begins with a vision and is defined by the quality of its execution. With over 15 years of hands-on installation experience, we partner with businesses, retailers, and commercial clients to transform ideas into professional, functional environments that leave a lasting impression and support long-term success.</p>
+              <p>Our team is built on trust, communication, reliability, and a commitment to delivering exceptional results. We understand that every project comes with its own unique challenges, timelines, and expectations. That's why we approach each job with a problem-solving mindset, combining critical thinking, industry knowledge, and real-world experience to identify the right solutions and keep projects moving forward. No matter the complexity, we remain focused on overcoming obstacles, maintaining momentum, and delivering the results our clients expect.</p>
+              <p>We partner with general contractors, developers, retailers, facility managers, and commercial property owners to ensure projects are completed safely, efficiently, and to the highest standards. Bringing years of expertise, craftsmanship, and attention to detail necessary to execute projects with precision. We take pride in meeting deadlines, maintaining high standards, and ensuring every phase of the project is completed with professionalism and accountability.</p>
+            <p>We believe successful projects are built through strong partnerships. By working as an extension of your team, we provide clear communication, dependable service, and a collaborative approach from project kickoff to final completion. Our commitment is not only to the quality of our work, but to the confidence and trust we build with every client we serve.</p>
+            <p>At Astro Vision Installations, your vision becomes our mission. We don't just install fixtures or complete projects—we create solutions, solve challenges, build lasting partnerships, and bring visions to life. With a foundation built on experience, integrity, and dedication, we strive to deliver results that exceed expectations and provide the confidence that your project is in the right hands from start to finish.</p></div></div>
           </section>
 
           <section id="services" className="section tinted"><p className="eyebrow">Our Services</p><h2>Installation Services Built Around Execution.</h2><div className="cards">{services.map(s => <div className="card" key={s.title}><div className="icon">{s.icon}</div><h3>{s.title}</h3><p>{s.text}</p></div>)}</div></section>
@@ -121,10 +126,7 @@ useEffect(() => {
   <h2>Delivering Professional Results Across Every Project</h2>
 
   <p>
-    Our team has extensive experience in retail merchandising, fixture
-    installation, shelving systems, store resets, custom build-outs,
-    and commercial rollouts. We focus on quality workmanship, safety,
-    efficiency, and attention to detail from project start to completion.
+  We focus on quality workmanship, safety, efficiency, and attention to detail from project start to completion.
   </p>
 </div>
 
@@ -149,7 +151,7 @@ useEffect(() => {
 
           <section id="industries" className="section center"><p className="eyebrow">Industries We Serve</p><h2>Supporting Commercial Spaces From Rollout to Completion.</h2><div className="industries">{industries.map(i => <div key={i}>{i}</div>)}</div></section>
 
-          <section className="section cta"><div className="cta-box"><p className="eyebrow">Ready to Get Started?</p><h2>Taking Your Vision Above and Beyond</h2><p>Whether you're planning a retail rollout, office build-out, millwork package, cabinetry installation, or interior signage project, Astro Vision Installations has the experience and craftsmanship to bring your project to completion.</p><div className="actions"><button onClick={() => setQuoteOpen(true)} className="btn">Request a Quote</button><button onClick={() => goTo("gallery")} className="btn secondary">View Our Work</button></div></div></section>
+          <section className="section cta"><div className="cta-box"><p className="eyebrow">Ready to Get Started?</p><h2>Bringing Your Vision Above and Beyond Expectations./h2><p>Whether you're planning a retail rollout, office build-out, millwork package, cabinetry installation, or interior signage project, Astro Vision Installations has the experience and craftsmanship to bring your project to completion.</p><div className="actions"><button onClick={() => setQuoteOpen(true)} className="btn">Request a Quote</button><button onClick={() => goTo("gallery")} className="btn secondary">View Our Work</button></div></div></section>
         </main>
       )}
 
@@ -207,7 +209,7 @@ useEffect(() => {
         <div className="video-intro">
           <p className="eyebrow">Project Walkthrough</p>
           <p>
-            A walkthrough look at commercial retail fixture installation and project execution in progress.
+            A walkthrough look at retail fixture installation and project execution in progress.
           </p>
         </div>
 
@@ -242,7 +244,7 @@ useEffect(() => {
         </main>
       )}
 
-      <footer id="contact" className="footer"><div><img src="/assets/astro-vision-secondary-logo.png" alt="Astro Vision Installations" className="footer-logo" /><h3>Astro Vision Installations</h3><p>Taking Your Vision Above and Beyond</p><p>
+      <footer id="contact" className="footer"><div><img src="/assets/astro-vision-secondary-logo.png" alt="Astro Vision Installations" className="footer-logo" /><h3>Astro Vision Installations</h3><p>Bringing Your Vision Above and Beyond Expectations.</p><p>
   Retail rollouts and remodels, fixture installation, merchandising,
   shelving, displays, and nationwide project support.
 </p></div><div className="contact"><a href="tel:4078109979"><Phone /> (407) 810-9979</a><a href="tel:6073425483"><Phone /> (607) 342-5483</a><a href="mailto:astrovisioninstallations@gmail.com"><Mail /> astrovisioninstallations@gmail.com</a></div><div className="foot-note"><p>© 2020 Astro Vision Installations. All rights reserved.</p></div></footer>
