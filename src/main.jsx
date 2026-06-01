@@ -75,7 +75,12 @@ useEffect(() => {
     Request a Quote
   </button>
 </nav>
-          <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}<Menu size={28} /></button>
+          <button
+  className="mobile-menu-btn"
+  onClick={() => setMenuOpen(!menuOpen)}
+>
+  <Menu size={28} />
+</button>
         </div>
         {menuOpen && (
           <div className="mobile-nav">
