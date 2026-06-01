@@ -1687,66 +1687,57 @@ textarea:focus {
   transform: scale(1.03);
 }
 /* =========================
-   PROFESSIONAL GALLERY POLISH
+   CLEAN UNIFORM GALLERY
 ========================= */
 
-.portfolio-showcase {
-  max-width: 1550px !important;
-  margin: 0 auto !important;
-}
-
 .project-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  gap: 28px !important;
-  max-width: 1550px !important;
+  max-width: 1500px !important;
   margin: 0 auto 80px !important;
+
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
 }
 
 .project-grid img {
   width: 100% !important;
-  height: 360px !important;
+  height: 340px !important;
 
   object-fit: contain !important;
   object-position: center !important;
 
-  padding: 6px !important;
+  padding: 4px !important;
 
-  border-radius: 22px !important;
-  background:
-    radial-gradient(circle at top right, rgba(37,99,235,0.10), transparent 34%),
-    linear-gradient(145deg, #0d1320, #07101f) !important;
+  border-radius: 18px !important;
+  background: #0b1120 !important;
+  border: 1px solid rgba(147,197,253,0.14) !important;
 
-  border: 1px solid rgba(147,197,253,0.16) !important;
-
-  box-shadow:
-    0 16px 42px rgba(0,0,0,0.28) !important;
+  box-shadow: 0 14px 36px rgba(0,0,0,0.28) !important;
 
   transition: all 0.25s ease !important;
 }
 
 .project-grid img:hover {
-  transform: translateY(-6px) !important;
+  transform: translateY(-5px) !important;
   border-color: rgba(96,165,250,0.65) !important;
-  box-shadow:
-    0 20px 55px rgba(37,99,235,0.26) !important;
+  box-shadow: 0 18px 48px rgba(37,99,235,0.26) !important;
 }
 
-/* Slightly larger feature row feel on wider screens */
+/* Make wide photos feel balanced */
 @media (min-width: 1200px) {
   .project-grid img {
-    height: 390px !important;
+    height: 360px !important;
   }
 }
 
 /* Tablet */
 @media (max-width: 1000px) {
   .project-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 
   .project-grid img {
-    height: 340px !important;
+    height: 330px !important;
   }
 }
 
@@ -1754,11 +1745,25 @@ textarea:focus {
 @media (max-width: 700px) {
   .project-grid {
     grid-template-columns: 1fr !important;
-    gap: 22px !important;
+    gap: 20px !important;
   }
 
   .project-grid img {
-    height: 320px !important;
-    padding: 5px !important;
+    height: 310px !important;
+  }
+}
+
+/* =========================
+   BIGGER MOBILE HEADER LOGO
+========================= */
+
+@media (max-width: 900px) {
+  .brand-logo img {
+    height: 64px !important;
+    max-width: 240px !important;
+  }
+
+  .nav-wrap {
+    min-height: 82px !important;
   }
 }
