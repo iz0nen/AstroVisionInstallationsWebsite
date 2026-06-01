@@ -1569,15 +1569,15 @@ textarea:focus {
    INFO SECTION HOVER EFFECTS
 ========================= */
 
-.about,
-.tinted-dark,
-.center {
+.section about,
+.section tinted-dark,
+.section center {
   transition: all 0.25s ease;
 }
 
-.about:hover,
-.tinted-dark:hover,
-.center:hover {
+.section about:hover,
+.section tinted-dark:hover,
+.section center:hover {
   transform: translateY(-6px);
 
   border-color: rgba(96,165,250,0.65);
