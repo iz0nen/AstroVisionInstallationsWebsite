@@ -932,11 +932,13 @@ textarea:focus {
 }
 /* HARD MOBILE NAV OVERRIDE */
 
-/*@media (max-width: 768px) {
+@media (max-width: 768px) {
 
   .desktop-nav {
-    display: none;
-  }
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
   .mobile-menu-btn {
     display: flex;
@@ -952,7 +954,7 @@ textarea:focus {
     height: 44px !important;
     max-width: 210px !important;
   }
-}*/
+}
 /* =========================
    ABOUT + SERVICES POLISH
 ========================= */
