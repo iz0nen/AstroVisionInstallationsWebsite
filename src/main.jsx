@@ -49,25 +49,27 @@ useEffect(() => {
 
   const industries = ["Retail", "Hospitality", "Corporate Offices", "Healthcare", "Education", "Commercial Real Estate", "Developers", "General Contractors", "Property Management"];
   const chooseUs = ["Experienced Installation Professionals", "Commercial Construction Expertise", "Reliable Scheduling & Coordination", "Detail-Oriented Craftsmanship", "Safety-Focused Work Practices", "Commitment to Client Satisfaction"];
-  const futureCategories = ["Millwork Installation", "Cabinetry Installation", "Interior Signage, Displays & Graphics", "Finish Carpentry"];
-
   return (
     <div className="site">
       <header className="header">
         <div className="nav-wrap">
-          <a href="#" className="brand brand-logo" onClick={() => setPage("home")}>
+          <a
+  href="#home"
+  className="brand brand-logo"
+  onClick={() => goTo("home")}
+>
   <img src="/assets/astro-vision-header-logo.png" alt="Astro Vision Installations" />
 </a>
           <nav className="nav desktop-nav">
-  <button className="nav-pill" onClick={() => setPage("home")}>
+  <button className="nav-pill" onClick={() => goTo("home")}>
     Home
   </button>
 
-  <button className="nav-pill" onClick={() => setPage("gallery")}>
+ <button className="nav-pill" onClick={() => goTo("gallery")}>
     Project Gallery
   </button>
 
-  <button className="nav-pill" onClick={() => setPage("join")}>
+  <button className="nav-pill" onClick={() => goTo("join")}>
     Join Our Team
   </button>
 
@@ -100,7 +102,7 @@ useEffect(() => {
               <div className="hero-logo-card"><img src="/assets/astro-vision-main-logo.jpg" alt="Astro Vision Installations main logo" className="hero-logo" /></div>
               <p className="eyebrow">Commercial Installation Contractor</p>
               <h1>Astro Vision Installations</h1>
-              <p className="tagline">Bringing Your Vision Above and Beyond Expectations.</p>
+              <p className="tagline">Bringing Your Vision Above and Beyond Expectations.</p>    
               <p className="service-line">Professional Fixture Installation • Millwork • Cabinetry • Interior Signage, Displays & Graphics • Finish Carpentry</p>
               <p className="summary">Delivering quality installation services</p>
               <div className="actions"><button onClick={() => setQuoteOpen(true)} className="btn">Request a Quote</button><button onClick={() => goTo("gallery")} className="btn secondary">View Project Gallery</button></div>
@@ -108,8 +110,9 @@ useEffect(() => {
           </section>
 
           <section className="section about">
-            <img src="/assets/astro-vision-secondary-logo.png" alt="Astro Vision Installations secondary logo" className="about-logo" />
-            <div></div> className="two-col"<div><p className="eyebrow">About Us</p></h2><h2>Bringing Visions to Life Through Precision, Partnership, and Outstanding Performance</h2><h2>Concepts to Completion</h2></div><div className="copy">
+            <div className="two-col">
+  <div>
+    <p className="eyebrow">About Us</p><h2>Bringing Visions to Life Through Precision, Partnership, and Outstanding Performance</h2><h2>Concepts to Completion</h2></div><div className="copy">
               <p>At Astro Vision Installations, we believe every successful project begins with a vision and is defined by the quality of its execution. With over 15 years of hands-on installation experience, we partner with businesses, retailers, and commercial clients to transform ideas into professional, functional environments that leave a lasting impression and support long-term success.</p>
               <p>Our team is built on trust, communication, reliability, and a commitment to delivering exceptional results. We understand that every project comes with its own unique challenges, timelines, and expectations. That's why we approach each job with a problem-solving mindset, combining critical thinking, industry knowledge, and real-world experience to identify the right solutions and keep projects moving forward. No matter the complexity, we remain focused on overcoming obstacles, maintaining momentum, and delivering the results our clients expect.</p>
               <p>We partner with general contractors, developers, retailers, facility managers, and commercial property owners to ensure projects are completed safely, efficiently, and to the highest standards. Bringing years of expertise, craftsmanship, and attention to detail necessary to execute projects with precision. We take pride in meeting deadlines, maintaining high standards, and ensuring every phase of the project is completed with professionalism and accountability.</p>
@@ -151,7 +154,7 @@ useEffect(() => {
 
           <section id="industries" className="section center"><p className="eyebrow">Industries We Serve</p><h2>Supporting Commercial Spaces From Rollout to Completion.</h2><div className="industries">{industries.map(i => <div key={i}>{i}</div>)}</div></section>
 
-          <section className="section cta"><div className="cta-box"><p className="eyebrow">Ready to Get Started?</p><h2>Bringing Your Vision Above and Beyond Expectations./h2><p>Whether you're planning a retail rollout, office build-out, millwork package, cabinetry installation, or interior signage project, Astro Vision Installations has the experience and craftsmanship to bring your project to completion.</p><div className="actions"><button onClick={() => setQuoteOpen(true)} className="btn">Request a Quote</button><button onClick={() => goTo("gallery")} className="btn secondary">View Our Work</button></div></div></section>
+          <section className="section cta"><div className="cta-box"><p className="eyebrow">Ready to Get Started?</p><h2>Bringing Your Vision Above and Beyond Expectations.</h2><p>Whether you're planning a retail rollout, office build-out, millwork package, cabinetry installation, or interior signage project, Astro Vision Installations has the experience and craftsmanship to bring your project to completion.</p><div className="actions"><button onClick={() => setQuoteOpen(true)} className="btn">Request a Quote</button><button onClick={() => goTo("gallery")} className="btn secondary">View Our Work</button></div></div></section>
         </main>
       )}
 
