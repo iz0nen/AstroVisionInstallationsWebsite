@@ -885,31 +885,47 @@ textarea:focus {
     border-top: 1px solid rgba(255,255,255,0.1);
   }
 
-  .mobile-nav a,
-  .mobile-nav button {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  ./* =========================
+   MOBILE DROPDOWN BUTTONS
+========================= */
 
-    padding: 14px 18px;
-    border-radius: 999px;
+.mobile-nav button,
+.mobile-nav a {
+  width: 100%;
 
-    background: linear-gradient(135deg, #2563eb, #1e40af);
-    color: #ffffff !important;
+  padding: 15px 20px;
 
-    border: 1px solid rgba(147,197,253,0.35);
-    box-shadow: 0 12px 28px rgba(30,64,175,0.28);
+  border-radius: 14px;
 
-    font-weight: 900;
-    text-decoration: none;
-    text-align: center;
-  }
+  background: linear-gradient(
+    135deg,
+    #0f2d63,
+    #163b87
+  );
 
-  .mobile-nav a:hover,
-  .mobile-nav button:hover {
-    background: linear-gradient(135deg, #3b82f6, #2563eb);
-  }
+  color: #ffffff;
+
+  border: 1px solid rgba(96,165,250,0.18);
+
+  font-weight: 700;
+
+  text-align: center;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 8px 20px rgba(5,15,35,0.35);
+}
+
+.mobile-nav button:hover,
+.mobile-nav a:hover {
+  background: linear-gradient(
+    135deg,
+    #163b87,
+    #1d4ed8
+  );
+
+  transform: translateY(-2px);
 }
 /* HARD MOBILE NAV OVERRIDE */
 
