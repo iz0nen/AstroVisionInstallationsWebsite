@@ -158,12 +158,10 @@ useEffect(() => {
     <section className="gallery-intro">
   <span className="eyebrow">PROJECT PORTFOLIO</span>
 
-  <h1>Completed Projects Across Multiple Industries</h1>
+  <h1>Projects Across Multiple Industries</h1>
 
   <p>
-    Astro Vision Installations specializes in retail rollouts,
-    fixture installation, merchandising, signage installation,
-    custom build-outs, and commercial renovation support.
+
     Our gallery showcases a selection of completed projects
     demonstrating quality workmanship, precision, and attention
     to detail.
@@ -173,7 +171,7 @@ useEffect(() => {
     <section className="completed-projects">
       <div className="section-head simple">
         <div>
-          <p className="eyebrow">Completed Projects</p>
+          <p className="eyebrow">Projects</p>
           <h2>Installation Work</h2>
         </div>
       </div>
