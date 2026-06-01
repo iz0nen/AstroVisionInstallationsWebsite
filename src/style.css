@@ -1415,3 +1415,98 @@ textarea:focus {
     box-shadow: 0 18px 48px rgba(0,0,0,0.28) !important;
   }
 }
+/* =========================
+   HARD FINAL NAV / QUOTE FIX
+========================= */
+
+/* Desktop: hide mobile menu completely */
+@media (min-width: 901px) {
+  .menu-btn,
+  .mobile-nav {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .desktop-nav {
+    display: flex !important;
+    visibility: visible !important;
+  }
+}
+
+/* Dark service-card style for ALL quote/buttons */
+.nav-pill,
+.nav-pill-primary,
+.btn,
+.btn.small,
+.actions .btn,
+.header .btn,
+.header button:not(.menu-btn),
+.mobile-nav button,
+.mobile-nav a {
+  background:
+    radial-gradient(circle at top right, rgba(37,99,235,0.22), transparent 38%),
+    linear-gradient(145deg, #0d1320, #07101f) !important;
+
+  color: #ffffff !important;
+  border: 1px solid rgba(147,197,253,0.18) !important;
+  border-radius: 999px !important;
+
+  box-shadow: 0 18px 48px rgba(0,0,0,0.28) !important;
+}
+
+.nav-pill:hover,
+.nav-pill-primary:hover,
+.btn:hover,
+.btn.small:hover,
+.actions .btn:hover,
+.header .btn:hover,
+.header button:not(.menu-btn):hover,
+.mobile-nav button:hover,
+.mobile-nav a:hover {
+  background:
+    radial-gradient(circle at top right, rgba(59,130,246,0.28), transparent 38%),
+    linear-gradient(145deg, #111827, #0b214d) !important;
+
+  transform: translateY(-3px) !important;
+  border-color: rgba(96,165,250,0.65) !important;
+  box-shadow: 0 20px 55px rgba(37,99,235,0.28) !important;
+}
+
+/* Mobile: only show hamburger, not desktop nav */
+@media (max-width: 900px) {
+  .desktop-nav,
+  .nav.desktop-nav {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .menu-btn {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: 54px !important;
+    width: 54px !important;
+    pointer-events: auto !important;
+
+    background:
+      radial-gradient(circle at top right, rgba(37,99,235,0.22), transparent 38%),
+      linear-gradient(145deg, #0d1320, #07101f) !important;
+
+    color: #ffffff !important;
+    border: 1px solid rgba(147,197,253,0.18) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 18px 48px rgba(0,0,0,0.28) !important;
+  }
+
+  .mobile-nav {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    pointer-events: auto !important;
+  }
+}
