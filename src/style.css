@@ -1679,3 +1679,10 @@ textarea:focus {
     height: auto !important;
   }
 }
+.hero-logo-card img {
+  transition: transform 0.25s ease;
+}
+
+.hero-logo-card:hover img {
+  transform: scale(1.05);
+}
