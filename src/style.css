@@ -837,20 +837,47 @@ textarea:focus {
     display: none !important;
   }
 
-  .menu-btn {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
+  ./* =========================
+   MOBILE MENU BUTTON
+========================= */
 
-    width: 44px;
-    height: 44px;
-    border-radius: 999px;
+.menu-btn {
+  width: 54px;
+  height: 54px;
 
-    background: linear-gradient(135deg, #2563eb, #1e40af);
-    color: #ffffff;
-    border: 1px solid rgba(147,197,253,0.35);
-    box-shadow: 0 12px 28px rgba(30,64,175,0.35);
-  }
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #0f2d63,
+    #163b87
+  );
+
+  color: #ffffff;
+
+  border: 1px solid rgba(96,165,250,0.18);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 10px 24px rgba(5,15,35,0.45);
+}
+
+.menu-btn:hover {
+  transform: translateY(-2px);
+
+  background: linear-gradient(
+    135deg,
+    #163b87,
+    #1d4ed8
+  );
+}
 
   .mobile-nav {
     padding: 18px;
