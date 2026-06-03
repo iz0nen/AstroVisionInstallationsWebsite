@@ -154,7 +154,7 @@ useEffect(() => {
 
           <section id="industries" className="section center"><p className="eyebrow">Industries We Serve</p><h2>Supporting Commercial Spaces From Rollout to Completion.</h2><div className="industries">{industries.map(i => <div key={i}>{i}</div>)}</div></section>
 
-          <section className="section cta"><div className="cta-box"><p className="eyebrow">Ready to Get Started?</p><h2>Bringing Your Vision Above and Beyond Expectations.</h2><p>Whether Submit a quote with plans, contracting opportunities, ideas, and the vision of what you want/expect. Astro Vision Installations has the experience and craftsmanship to bring your project to completion.</p><div className="actions"><button onClick={() => setQuoteOpen(true)} className="btn">Request a Quote</button><button onClick={() => goTo("gallery")} className="btn secondary">View Our Work</button></div></div></section>
+          <section className="section cta"><div className="cta-box"><p className="eyebrow">Ready to Get Started?</p><h2>Bringing Your Vision Above and Beyond Expectations.</h2><p>Submit a quote with plans, contracting opportunities, ideas, and the vision of what you want/expect. Astro Vision Installations has the experience and craftsmanship to bring your project to completion.</p><div className="actions"><button onClick={() => setQuoteOpen(true)} className="btn">Request a Quote</button><button onClick={() => goTo("gallery")} className="btn secondary">View Our Work</button></div></div></section>
         </main>
       )}
 
