@@ -1849,3 +1849,11 @@ textarea:focus {
   transform: translateY(-2px);
   border-color: rgba(96,165,250,0.65);
 }
+.project-grid img {
+  border: 1px solid rgba(37,99,235,0.08) !important;
+
+  background: #0b1120 !important;
+
+  box-shadow:
+    0 14px 36px rgba(0,0,0,0.28) !important;
+}
