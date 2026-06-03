@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { Hammer, Drill, Building2, PanelTop, PanelsTopLeft, LayoutGrid, DoorOpen, Mail, Phone, CheckCircle, Upload, Menu, X, Images, Users, Home } from "lucide-react";
+import { Hammer, Drill, Building2, PanelTop, Ruler, PanelsTopLeft, LayoutGrid, DoorOpen, Mail, Phone, CheckCircle, Upload, Menu, X, Images, Users, Home } from "lucide-react";
 import "./style.css";
 
 function AstroVisionWebsite() {
@@ -44,7 +44,7 @@ useEffect(() => {
     { title: "Millwork Installation", icon: <Drill />, text: "Custom millwork, feature walls, cashwraps, trim packages, reception/office desks, wall panel systems, custom woodwork, and specialty installations." },
     { title: "Casework Installation", icon: <DoorOpen />, text: "Commercial casework, office cabinetry, built-ins, storage systems, cabinet & Countertop installations." },
     { title: "Interior Signage, Displays & Graphics", icon: <PanelTop />, text: "Interior wall & LIT signage, dimensional lettering, display systems, wall graphics, vinyl graphics, wayfinding systems, branded environments, window graphics, and corporate identity installations." },
-    { title: "Rough & Finish Carpentry", icon: <Hammer />, text: "Doors, hardware, trim, molding, wall panel systems, detailed finish work." },
+    { title: "Rough & Finish Carpentry", icon: <Ruler />, text: "Doors, hardware, trim, molding, wall panel systems, detailed finish work." },
   ];
 
   const industries = ["Retail", "Hospitality", "Corporate Offices", "Healthcare", "Education", "Commercial Real Estate", "Developers", "General Contractors", "Property Management"];
