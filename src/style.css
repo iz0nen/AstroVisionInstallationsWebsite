@@ -311,7 +311,18 @@ a {
   white-space: nowrap;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .service-line {
+    white-space: normal;
+    max-width: 92%;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
 
+  .hero-inner {
+    max-width: 100%;
+  }
+}
 .summary {
   max-width: 720px;
   margin: 0 auto;
