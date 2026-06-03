@@ -1857,3 +1857,35 @@ textarea:focus {
   box-shadow:
     0 14px 36px rgba(0,0,0,0.28) !important;
 }
+/* =========================
+   FIX GALLERY BUTTON FRAME
+========================= */
+
+.gallery-image-button {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  display: block !important;
+  width: 100% !important;
+
+  cursor: pointer !important;
+  border-radius: 18px !important;
+}
+
+.gallery-image-button img {
+  width: 100% !important;
+  height: 360px !important;
+
+  object-fit: contain !important;
+  object-position: center !important;
+
+  padding: 4px !important;
+
+  background: #0b1120 !important;
+  border: 1px solid rgba(37,99,235,0.10) !important;
+  border-radius: 18px
