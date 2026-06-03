@@ -299,11 +299,10 @@ a {
 }
 
 .service-line {
-  max-width: 1500px;
-  margin: 10px auto;
-  color: #d1d5db;
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: 1.25rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  white-space: nowrap;
 }
 
 .summary {
