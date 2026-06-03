@@ -187,8 +187,8 @@ useEffect(() => {
     <img src="/assets/Fixture half built.jpg" alt="Fixture installation project" />
     <img src="/assets/retail-rollout-1.jpg" alt="Retail rollout project" />
     <img src="/assets/retail-rollout-2.jpg" alt="Retail rollout project" />
-    <img src="/assets/Signage Display Walls 2.jpg" alt="Dicks Signage 2" />
-    <img src="/assets/Signage Display Walls.jpg" alt="Dicks Signage" />
+    <img src="/assets/Signage Display Walls 2.jpeg" alt="Dicks Signage 2" />
+    <img src="/assets/Signage Display Walls.jpeg" alt="Dicks Signage" />
 
     <img src="/assets/skechers-work-wall.jpg" alt="Skechers display wall" />
     <img src="/assets/workwear-display-wall.jpg" alt="Workwear display wall" />
