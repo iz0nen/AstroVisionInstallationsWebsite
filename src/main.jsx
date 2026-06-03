@@ -103,7 +103,7 @@ useEffect(() => {
               <p className="eyebrow">Commercial Installation Contractor</p>
               <h1>Astro Vision Installations</h1>
               <p className="tagline">Bringing Your Vision Above and Beyond Expectations.</p>    
-              <p className="service-line">Professional Fixture Installation • Millwork • Cabinetry • Interior Signage, Displays & Graphics • Finish Carpentry</p>
+              <p className="service-line">Professional Fixture Installation • Millwork • Casework • Interior Signage, Displays & Graphics • Rough & Finish Carpentry</p>
               <p className="summary">Delivering quality installation services</p>
               <div className="actions"><button onClick={() => setQuoteOpen(true)} className="btn">Request a Quote</button><button onClick={() => goTo("gallery")} className="btn secondary">View Project Gallery</button></div>
             </div>
