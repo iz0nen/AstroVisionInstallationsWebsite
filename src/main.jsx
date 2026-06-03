@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { Hammer, Drill, ,Shelf, Building2, PanelTop, BriefcaseBusiness, Mail, Phone, CheckCircle, Upload, Menu, X, Images, Users, Home } from "lucide-react";
+import { Hammer, Drill, Shelf, Building2, PanelTop, BriefcaseBusiness, Mail, Phone, CheckCircle, Upload, Menu, X, Images, Users, Home } from "lucide-react";
 import "./style.css";
 
 function AstroVisionWebsite() {
