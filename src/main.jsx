@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { Hammer, Drill, Building2, PanelTop, PanelsTopLeft, Mail, Phone, CheckCircle, Upload, Menu, X, Images, Users, Home } from "lucide-react";
+import { Hammer, Drill, Building2, PanelTop, LayoutGrid, Mail, Phone, CheckCircle, Upload, Menu, X, Images, Users, Home } from "lucide-react";
 import "./style.css";
 
 function AstroVisionWebsite() {
@@ -40,7 +40,7 @@ useEffect(() => {
   };
 
   const services = [
-    { title: "Fixture Installation", icon: <PanelsTopLeft />, text: "Retail fixtures, merchandising displays, shelving systems, kiosks, store remodels, and rollout installations." },
+    { title: "Fixture Installation", icon: <LayoutGrid />, text: "Retail fixtures, merchandising displays, shelving systems, kiosks, store remodels, and rollout installations." },
     { title: "Millwork Installation", icon: <Drill />, text: "Custom millwork, feature walls, cashwraps, trim packages, reception/office desks, wall panel systems, custom woodwork, and specialty installations." },
     { title: "Casework Installation", icon: <Building2 />, text: "Commercial casework, office cabinetry, built-ins, storage systems, cabinet & Countertop installations." },
     { title: "Interior Signage, Displays & Graphics", icon: <PanelTop />, text: "Interior wall & LIT signage, dimensional lettering, display systems, wall graphics, vinyl graphics, wayfinding systems, branded environments, window graphics, and corporate identity installations." },
