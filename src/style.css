@@ -298,11 +298,18 @@ a {
   font-weight: 800;
 }
 
+.hero-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .service-line {
   font-size: 1.25rem;
   max-width: 1200px;
   margin: 0 auto;
   white-space: nowrap;
+  text-align: center;
 }
 
 .summary {
