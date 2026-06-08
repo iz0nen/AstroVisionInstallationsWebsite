@@ -345,7 +345,7 @@ function AstroVisionWebsite() {
           <p>Retail rollouts and remodels, commercial construction projects, and nationwide project support.</p>
         </div>
         <div className="contact">
-          <a href="tel:8634858366"><Phone /> (863) 485-8366 Project Coordinator</a>
+          <a href="tel:8634858366"><Phone /> (863) 485-8366 Project Line</a>
           <a href="mailto:astrovisioninstallations@gmail.com"><Mail /> astrovisioninstallations@gmail.com</a>
         </div>
         <div className="foot-note"><p>© 2026 Astro Vision Installations. All rights reserved.</p></div>
