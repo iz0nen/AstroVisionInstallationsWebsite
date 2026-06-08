@@ -345,7 +345,7 @@ function AstroVisionWebsite() {
           <p>Retail rollouts and remodels, commercial construction projects, and nationwide project support.</p>
         </div>
         <div className="contact">
-          <a href="tel:8634858366"><Phone /> (863) 485-8366 -    Project Coordinator Line</a>
+          <a href="tel:8634858366"><Phone /> (863) 485-8366 <a>Project Coordinator Line</a></a>
           <a href="mailto:astrovisioninstallations@gmail.com"><Mail /> astrovisioninstallations@gmail.com</a>
         </div>
         <div className="foot-note"><p>© 2026 Astro Vision Installations. All rights reserved.</p></div>
@@ -364,7 +364,7 @@ function AstroVisionWebsite() {
               const data = Object.fromEntries(new FormData(form).entries());
               const response = await fetch("/api/quote", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
               if (response.ok) { alert("Thank you. Your quote request has been sent."); form.reset(); setQuoteOpen(false); }
-              else { alert("Something went wrong. Please call us at (407) 810-9979."); }
+              else { alert("Something went wrong. Please call us at (863) 485-8366."); }
             }}>
               <input type="hidden" name="form-name" value="quote-request" />
               <div className="form-grid"><input name="company" placeholder="Company Name" /><input name="name" placeholder="Contact Name" /><input name="phone" placeholder="Phone Number" /><input name="email" placeholder="Email Address" type="email" /></div>
