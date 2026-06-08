@@ -349,7 +349,7 @@ function AstroVisionWebsite() {
           <a href="tel:6073425483"><Phone /> (607) 342-5483</a>
           <a href="mailto:astrovisioninstallations@gmail.com"><Mail /> astrovisioninstallations@gmail.com</a>
         </div>
-        <div className="foot-note"><p>© 2020 Astro Vision Installations. All rights reserved.</p></div>
+        <div className="foot-note"><p>© 2026 Astro Vision Installations. All rights reserved.</p></div>
       </footer>
 
       {quoteOpen && (
