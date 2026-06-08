@@ -246,7 +246,7 @@ function AstroVisionWebsite() {
             <div className="cta-box">
               <p className="eyebrow">Ready to Get Started?</p>
               <h2>Bringing Your Vision Above and Beyond Expectations.</h2>
-              <p>Request a quote... Whether you have an entire project with plans, contracting opportunities, ideas, or just a vision of what you want/expect! We can take it or build on it from there. We will respond back with a fair and concise offer that factors in everything. Astro Vision Installations has the experience and craftsmanship to bring your project to completion.</p>
+              <p>Request a quote... Whether you have an entire project with plans, contracting opportunities, ideas, or just a vision of what you want/expect! We can take it & build on it from there. We will respond back with a fair and concise offer that factors in everything. Astro Vision Installations has the experience and craftsmanship to bring your project to completion.</p>
               <div className="actions">
                 <button onClick={() => setQuoteOpen(true)} className="btn">Request a Quote</button>
                 <button onClick={() => goTo("gallery")} className="btn secondary">View Our Work</button>
