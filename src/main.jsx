@@ -188,41 +188,18 @@ const projectShowcase = [
     ],
   },
   {
-    title: "Project Walkthroughs",
-    count: "4 Videos",
-    description:
-      "O'reillys, Shoe Carnival",
-    cover: "video
-        className="retail-video"
-        src="/assets/Oreillys Frontroom.mp4"
-        controls
-        muted
-        playsInline
-      ",
-    videos: [
-      "<video
-        className="retail-video"
-        src="/assets/Oreillys Backroom.mp4"
-        controls
-        muted
-        playsInline
-      />",
-      "<video
-        className="retail-video"
-        src="/assets/Oreillys walkthrough 1.mp4"
-        controls
-        muted
-        playsInline
-      />",
-      "<video
-        className="retail-video"
-        src="/assets/Shoe Carnival Walkthrough.mp4"
-        controls
-        muted
-        playsInline
-      />",
-    ],
-  },
+  title: "Project Walkthroughs",
+  count: "4 Videos",
+  description:
+    "Store walkthroughs, completed projects, rollout documentation, and final installations.",
+  cover: "/assets/Oreillys Frontroom.mp4",
+  videos: [
+    "/assets/Oreillys Frontroom.mp4",
+    "/assets/Oreillys Backroom.mp4",
+    "/assets/Oreillys walkthrough 1.mp4",
+    "/assets/Shoe Carnival Walkthrough.mp4",
+  ],
+},
 ];
   return (
     <div className="site">
@@ -378,8 +355,21 @@ const projectShowcase = [
           onClick={() => setActiveProject(project)}
         >
           <div className="premium-project-image">
-            <img src={project.cover} alt={project.title} />
-          </div>
+  {project.videos ? (
+    <video
+      src={project.cover}
+      muted
+      playsInline
+      autoPlay
+      loop
+    />
+  ) : (
+    <img
+      src={project.cover}
+      alt={project.title}
+    />
+  )}
+</div>
 
           <div className="premium-project-content">
             <span>{project.count}</span>
@@ -440,19 +430,41 @@ const projectShowcase = [
           </div>
 
           <div className="project-viewer-thumbs">
-            {activeProject.images.map((image) => (
-              <button
-                key={image}
-                onClick={() =>
-                  setSelectedImage({
-                    src: image,
-                    alt: activeProject.title,
-                  })
-                }
-              >
-                <img src={image} alt={activeProject.title} />
-              </button>
-            ))}
+
+  {activeProject.images &&
+    activeProject.images.map((image) => (
+      <button
+        key={image}
+        onClick={() =>
+          setSelectedImage({
+            type: "image",
+            src: image,
+          })
+        }
+      >
+        <img src={image} alt="" />
+      </button>
+    ))}
+
+  {activeProject.videos &&
+    activeProject.videos.map((video) => (
+      <button
+        key={video}
+        onClick={() =>
+          setSelectedImage({
+            type: "video",
+            src: video,
+          })
+        }
+      >
+        <video
+          src={video}
+          muted
+          playsInline
+        />
+      </button>
+    ))}
+</div>
           </div>
         </div>
       </div>
@@ -547,11 +559,34 @@ const projectShowcase = [
       )}
 
       {selectedImage && (
-        <div className="image-lightbox" onClick={() => setSelectedImage(null)}>
-          <button className="lightbox-close" onClick={() => setSelectedImage(null)} aria-label="Close image preview"><X /></button>
-          <img src={selectedImage.src} alt={selectedImage.alt} onClick={(event) => event.stopPropagation()} />
-        </div>
-      )}
+  <div
+    className="image-lightbox"
+    onClick={() => setSelectedImage(null)}
+  >
+    <button
+      className="lightbox-close"
+      onClick={() => setSelectedImage(null)}
+    >
+      <X />
+    </button>
+
+    {selectedImage.type === "video" ? (
+      <video
+        src={selectedImage.src}
+        controls
+        autoPlay
+        playsInline
+        onClick={(e) => e.stopPropagation()}
+      />
+    ) : (
+      <img
+        src={selectedImage.src}
+        alt={selectedImage.alt}
+        onClick={(e) => e.stopPropagation()}
+      />
+    )}
+  </div>
+)}
     </div>
   );
 }
