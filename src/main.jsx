@@ -26,6 +26,7 @@ function AstroVisionWebsite() {
   const [page, setPage] = useState("home");
   const [selectedImage, setSelectedImage] = useState(null);
   const [activeProject, setActiveProject] = useState(null);
+  const [currentMediaIndex, setCurrentMediaIndex] = useState(0);
 
   useEffect(() => {
     const updatePage = () => {
@@ -221,6 +222,47 @@ const projectShowcase = [
   ],
 },
 ];
+  const getActiveMedia = () => {
+  if (!activeProject) return [];
+
+  const images = activeProject.images
+    ? activeProject.images.map((src) => ({
+        type: "image",
+        src,
+        alt: activeProject.title,
+      }))
+    : [];
+
+  const videos = activeProject.videos
+    ? activeProject.videos.map((src) => ({
+        type: "video",
+        src,
+        alt: activeProject.title,
+      }))
+    : [];
+
+  return [...images, ...videos];
+};
+
+const openMedia = (index) => {
+  const media = getActiveMedia();
+
+  setCurrentMediaIndex(index);
+  setSelectedImage(media[index]);
+};
+
+const goMedia = (direction) => {
+  const media = getActiveMedia();
+  if (!media.length) return;
+
+  const nextIndex =
+    direction === "next"
+      ? (currentMediaIndex + 1) % media.length
+      : (currentMediaIndex - 1 + media.length) % media.length;
+
+  setCurrentMediaIndex(nextIndex);
+  setSelectedImage(media[nextIndex]);
+};
   return (
     <div className="site">
       <header className="header">
@@ -431,41 +473,18 @@ const projectShowcase = [
           </div>
 
           <div className="project-viewer-thumbs">
-
-  {activeProject.images &&
-    activeProject.images.map((image) => (
-      <button
-        key={image}
-        onClick={() =>
-          setSelectedImage({
-            type: "image",
-            src: image,
-          })
-        }
-      >
-        <img src={image} alt="" />
-      </button>
-    ))}
-
-  {activeProject.videos &&
-    activeProject.videos.map((video) => (
-      <button
-        key={video}
-        onClick={() =>
-          setSelectedImage({
-            type: "video",
-            src: video,
-          })
-        }
-      >
-        <video
-          src={video}
-          muted
-          controls
-          playsInline
-        />
-      </button>
-    ))}
+  {getActiveMedia().map((item, index) => (
+    <button
+      key={item.src}
+      onClick={() => openMedia(index)}
+    >
+      {item.type === "video" ? (
+        <video src={item.src} muted playsInline />
+      ) : (
+        <img src={item.src} alt={item.alt} />
+      )}
+    </button>
+  ))}
 </div>
           </div>
         </div>
@@ -571,6 +590,26 @@ const projectShowcase = [
       <X />
     </button>
 
+    <button
+      className="lightbox-prev"
+      onClick={(e) => {
+        e.stopPropagation();
+        goMedia("prev");
+      }}
+    >
+      ‹
+    </button>
+
+    <button
+      className="lightbox-next"
+      onClick={(e) => {
+        e.stopPropagation();
+        goMedia("next");
+      }}
+    >
+      ›
+    </button>
+
     {selectedImage.type === "video" ? (
       <video
         src={selectedImage.src}
@@ -587,6 +626,7 @@ const projectShowcase = [
       />
     )}
   </div>
+)}
 )}
     </div>
   );
