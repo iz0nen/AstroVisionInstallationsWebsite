@@ -128,26 +128,35 @@ const projectShowcase = [
     title: "Retail Rollouts",
     count: "5 Photos",
     description:
-      "Retail fixture installation, New Store Rollouts, Remodels, Gondola Setup <p>(O'Reillys, Shoe Carnival, Napa Auto Parts).</p>",
+      "New Store Rollouts, Remodels, Gondola Setup(O'Reillys, Shoe Carnival, Napa Auto Parts)",
     cover: "/assets/Signage nike 2.jpg",
     images: [
       "/assets/Signage nike 1.jpg",
       "/assets/Signage nike 2.jpg",
-      
+      /assets/retail-rollout-1.jpg",
+      "/assets/retail-rollout-2.jpg",
       "/assets/retail-rollout-3.jpg",
     ],
   },
   {
     title: "Interior Graphics/Signage & LIT/SEG Displays",
-    count: "4 Photos",
+    count: "14 Photos",
     description:
       "Branded display wall installation with signage, graphics, product display elements, and finish details.",
-    cover: "/assets/skechers-work-wall.jpg",
+    cover: "/assets/Dollys Birdie.jpeg",
     images: [
+      "/assets/Dollys Birdie.jpeg",
+      "/assets/Dollys Guitars.jpeg",
+      "/assets/Dollys Doors.jpeg",
+      "/assets/Dollys Pics.jpeg",
+      "/assets/Lego Signage.jpeg",
+      "/assets/Lego Signage3.jpeg",
+      "/assets/Lego Signage4.jpeg",
       "/assets/skechers-work-wall.jpg",
       "/assets/workwear-display-wall.jpg",
       "/assets/Signage Display Walls.jpeg",
       "/assets/Signage Display Walls 2.jpeg",
+      "/assets/Dollys Frames Truck Room.jpeg",
       "/assets/nike-kids-wall.jpg",
       "/assets/nike-kids-finished-display.jpg",
     ],
@@ -160,8 +169,7 @@ const projectShowcase = [
     cover: "/assets/Fixture half built.jpg",
     images: [
       "/assets/Fixture half built.jpg",
-      "/assets/retail-rollout-1.jpg",
-      "/assets/retail-rollout-2.jpg",
+      "
     ],
   },
   {
