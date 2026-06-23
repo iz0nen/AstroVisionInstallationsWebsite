@@ -27,6 +27,7 @@ function AstroVisionWebsite() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [activeProject, setActiveProject] = useState(null);
   const [currentMediaIndex, setCurrentMediaIndex] = useState(0);
+  const [projectPreviewIndex, setProjectPreviewIndex] = useState(0);
 
   useEffect(() => {
     const updatePage = () => {
@@ -421,7 +422,10 @@ const goMedia = (direction) => {
         <button
           className="premium-project-card"
           key={project.title}
-          onClick={() => setActiveProject(project)}
+          onClick={() => {
+  setActiveProject(project);
+  setProjectPreviewIndex(0);
+}}
         >
          <div className="premium-project-image">
   {project.videos ? (
@@ -469,8 +473,44 @@ const goMedia = (direction) => {
           </div>
 
           <div className="project-viewer-main">
-            <img src={activeProject.cover} alt={activeProject.title} />
-          </div>
+  <button
+    className="project-preview-arrow preview-prev"
+    onClick={() => {
+      const media = getActiveMedia();
+      setProjectPreviewIndex(
+        projectPreviewIndex === 0 ? media.length - 1 : projectPreviewIndex - 1
+      );
+    }}
+  >
+    ‹
+  </button>
+
+  {getActiveMedia()[projectPreviewIndex]?.type === "video" ? (
+    <video
+      src={getActiveMedia()[projectPreviewIndex].src}
+      controls
+      playsInline
+    />
+  ) : (
+    <img
+      src={getActiveMedia()[projectPreviewIndex]?.src}
+      alt={activeProject.title}
+      onClick={() => openMedia(projectPreviewIndex)}
+    />
+  )}
+
+  <button
+    className="project-preview-arrow preview-next"
+    onClick={() => {
+      const media = getActiveMedia();
+      setProjectPreviewIndex(
+        projectPreviewIndex === media.length - 1 ? 0 : projectPreviewIndex + 1
+      );
+    }}
+  >
+    ›
+  </button>
+</div>
 
           <div className="project-viewer-thumbs">
   {getActiveMedia().map((item, index) => (
