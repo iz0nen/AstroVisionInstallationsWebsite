@@ -162,6 +162,17 @@ const projectShowcase = [
       "/assets/retail-rollout-1.jpg",
       "/assets/retail-rollout-2.jpg",
     ],
+  {
+    title: "Merchandising",
+    count: "3 Photos",
+    description:
+      "Retail Merchandising, Planogram Execution",
+    cover: "/assets/Fixture half built.jpg",
+    images: [
+      "/assets/Fixture half built.jpg",
+      "/assets/retail-rollout-1.jpg",
+      "/assets/retail-rollout-2.jpg",
+    ],
   },
   {
     title: "Casework & Cashwrap Installation",
