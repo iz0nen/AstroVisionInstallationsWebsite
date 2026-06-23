@@ -63,7 +63,7 @@ function AstroVisionWebsite() {
     {
       title: "Fixture Installation",
       icon: <PanelsTopLeft />,
-      text: "Retail fixtures, merchandising displays, shelving systems, kiosks, store remodels, and rollout installations.",
+      text: "Retail fixtures, merchandising displays, shelving systems, kiosks, store remodels, and new retail rollouts.",
     },
     {
       title: "Millwork Installation",
@@ -78,7 +78,7 @@ function AstroVisionWebsite() {
     {
       title: "Interior Signage, Displays & Graphics",
       icon: <PanelTop />,
-      text: "Interior wall & lit signage, dimensional lettering, display systems, wall graphics, vinyl graphics, wayfinding systems, branded environments, window graphics, and corporate identity installations.",
+      text: "Interior wall & lIT/SEG signage, dimensional lettering, display systems, wall graphics, vinyl graphics, wayfinding systems, branded environments, window graphics, and corporate identity installations.",
     },
     {
       title: "Rough & Finish Carpentry",
@@ -393,7 +393,7 @@ const goMedia = (direction) => {
           <section className="section cta">
             <div className="cta-box">
               <p className="eyebrow">Ready to Get Started?</p>
-              <h2>Bringing Your Vision Above and Beyond Expectations.</h2>
+              <h2>Bringing Your Vision Above and Beyond.</h2>
               <p>Request a quote... Whether you have an entire project with plans, contracting opportunities, ideas, or just a vision of what you want/expect! We can take it & build on it from there. We will respond back with a fair and concise offer that factors in everything. Astro Vision Installations has the experience and craftsmanship to bring your project to completion.</p>
               <div className="actions">
                 <button onClick={() => setQuoteOpen(true)} className="btn">Request a Quote</button>
