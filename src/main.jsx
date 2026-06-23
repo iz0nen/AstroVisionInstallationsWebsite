@@ -192,13 +192,13 @@ const projectShowcase = [
     count: "4 Videos",
     description:
       "O'reillys, Shoe Carnival",
-    cover: "<video
+    cover: "video
         className="retail-video"
         src="/assets/Oreillys Frontroom.mp4"
         controls
         muted
         playsInline
-      />",
+      ",
     videos: [
       "<video
         className="retail-video"
