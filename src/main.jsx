@@ -169,7 +169,6 @@ const projectShowcase = [
     cover: "/assets/Fixture half built.jpg",
     images: [
       "/assets/Fixture half built.jpg",
-      "
     ],
   },
   {
@@ -177,11 +176,10 @@ const projectShowcase = [
     count: "3 Photos",
     description:
       "Retail Merchandising, Planogram Execution",
-    cover: "/assets/Fixture half built.jpg",
+    cover: "/assets/Lego Merchandising.jpeg",
     images: [
-      "/assets/Fixture half built.jpg",
-      "/assets/retail-rollout-1.jpg",
-      "/assets/retail-rollout-2.jpg",
+      "/assets/Lego Merchandising2.jpeg",
+      "/assets/Lego Merchandising.jpeg",
     ],
   },
   {
