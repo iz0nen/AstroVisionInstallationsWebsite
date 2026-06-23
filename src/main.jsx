@@ -519,7 +519,7 @@ const projectShowcase = [
         <div>
           <img src="/assets/astro-vision-secondary-logo.png" alt="Astro Vision Installations" className="footer-logo" />
           <h3>Astro Vision Installations</h3>
-          <p>Bringing Your Vision Above and Beyond Expectations.</p>
+          <p>Bringing Your Vision Above and Beyond.</p>
           <p>Retail rollouts and remodels, commercial construction projects, and nationwide project support.</p>
         </div>
         <div className="contact">
