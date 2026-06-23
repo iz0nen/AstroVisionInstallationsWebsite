@@ -627,7 +627,6 @@ const goMedia = (direction) => {
     )}
   </div>
 )}
-)}
     </div>
   );
 }
