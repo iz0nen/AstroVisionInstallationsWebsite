@@ -187,7 +187,7 @@ const projectShowcase = [
     title: "Merchandising",
     count: "3 Photos",
     description:
-      "Retail Merchandising, Planogram Execution",
+      "Retail Merchandising, Planogram Execution (Wal-mart, Oreillys, Harris Teeter)",
     cover: "/assets/Lego Merchandising.jpeg",
     images: [
       "/assets/Lego Merchandising2.jpeg",
@@ -199,7 +199,7 @@ const projectShowcase = [
     title: "Casework & Cashwrap Installation",
     count: "5 Photos",
     description:
-      "Cashwraps, casework, cabinets, counters, slatwall, and commercial finish installation support.",
+      "Cashwraps, casework, cabinets, counters, slatwall, and commercial finish installation support(Shoe Carnival, Aldi, O'Reillys, Residential).",
     cover: "/assets/cashwrap.jpg",
     images: [
       "/assets/cashwrap.jpg",
