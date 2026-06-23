@@ -162,6 +162,7 @@ const projectShowcase = [
       "/assets/retail-rollout-1.jpg",
       "/assets/retail-rollout-2.jpg",
     ],
+  },
   {
     title: "Merchandising",
     count: "3 Photos",
