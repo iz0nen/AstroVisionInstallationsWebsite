@@ -126,7 +126,7 @@ function AstroVisionWebsite() {
 const projectShowcase = [
   {
     title: "Retail Rollouts",
-    count: "5 Photos",
+    count: "7 Photos",
     description:
       "New Store Rollouts, Remodels, Gondola Setup(O'Reillys, Shoe Carnival, Napa Auto Parts)",
     cover: "/assets/Signage nike 2.jpg",
@@ -136,6 +136,8 @@ const projectShowcase = [
       "/assets/retail-rollout-1.jpg",
       "/assets/retail-rollout-2.jpg",
       "/assets/retail-rollout-3.jpg",
+      "/assets/Retail Rollout Oreillys 1.jpeg",
+      "/assets/Oreillys Rollout.jpeg",
     ],
   },
   {
@@ -163,12 +165,19 @@ const projectShowcase = [
   },
   {
     title: "Fixture & Shelving Installation",
-    count: "3 Photos",
+    count: "8 Photos",
     description:
       "Commercial shelving systems, fixture assembly,  retail merchandising, and rollout execution.",
-    cover: "/assets/Fixture half built.jpg",
+    cover: "/assets/Oreillys Bulkrack.jpeg",
     images: [
       "/assets/Fixture half built.jpg",
+      "/assets/Oreillys Bulkrack.jpeg",
+      "/assets/Oreillys Bulkrack2.jpeg",
+      "/assets/Oreillys Backroom.jpeg",
+      "/assets/Oreillys Backroom2.jpeg",
+      "/assets/Oreillys Backroom3.jpeg",
+      "/assets/Oreillys Backroom4.jpeg",
+      "/assets/Oreillys Parts Counter.jpeg",
     ],
   },
   {
@@ -180,12 +189,12 @@ const projectShowcase = [
     images: [
       "/assets/Lego Merchandising2.jpeg",
       "/assets/Lego Merchandising.jpeg",
-      "/assets/LegoSignage2.jpeg",
+      "/assets/Lego Signage2.jpeg",
     ],
   },
   {
     title: "Casework & Cashwrap Installation",
-    count: "3 Photos",
+    count: "5 Photos",
     description:
       "Cashwraps, casework, cabinets, counters, slatwall, and commercial finish installation support.",
     cover: "/assets/cashwrap.jpg",
@@ -364,14 +373,13 @@ const projectShowcase = [
           key={project.title}
           onClick={() => setActiveProject(project)}
         >
-          <div className="premium-project-image">
+         <div className="premium-project-image">
   {project.videos ? (
     <video
       src={project.cover}
-      muted
+      controls
+      preload="metadata"
       playsInline
-      autoPlay
-      loop
     />
   ) : (
     <img
