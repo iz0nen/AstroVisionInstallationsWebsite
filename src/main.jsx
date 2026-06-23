@@ -187,6 +187,42 @@ const projectShowcase = [
       "/assets/slatwall-installation.jpg",
     ],
   },
+  {
+    title: "Project Walkthroughs",
+    count: "4 Videos",
+    description:
+      "O'reillys, Shoe Carnival",
+    cover: "<video
+        className="retail-video"
+        src="/assets/Oreillys Frontroom.mp4"
+        controls
+        muted
+        playsInline
+      />",
+    videos: [
+      "<video
+        className="retail-video"
+        src="/assets/Oreillys Backroom.mp4"
+        controls
+        muted
+        playsInline
+      />",
+      "<video
+        className="retail-video"
+        src="/assets/Oreillys walkthrough 1.mp4"
+        controls
+        muted
+        playsInline
+      />",
+      "<video
+        className="retail-video"
+        src="/assets/Shoe Carnival Walkthrough.mp4"
+        controls
+        muted
+        playsInline
+      />",
+    ],
+  },
 ];
   return (
     <div className="site">
