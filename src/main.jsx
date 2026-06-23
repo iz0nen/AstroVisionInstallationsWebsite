@@ -146,7 +146,7 @@ const projectShowcase = [
     title: "Interior Graphics/Signage & LIT/SEG Displays",
     count: "14 Photos",
     description:
-      "Branded display wall installation with signage, graphics, product display elements, and finish details.",
+      "Branded display installations (Dick's, Dolly's Tennessean Truck Stop, Lego, Sketchers, Shoe Carnival)",
     cover: "/assets/Dollys Birdie.jpeg",
     images: [
       "/assets/Dollys Birdie.jpeg",
