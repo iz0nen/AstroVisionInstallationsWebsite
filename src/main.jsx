@@ -133,7 +133,7 @@ const projectShowcase = [
     images: [
       "/assets/Signage nike 1.jpg",
       "/assets/Signage nike 2.jpg",
-      /assets/retail-rollout-1.jpg",
+      "/assets/retail-rollout-1.jpg",
       "/assets/retail-rollout-2.jpg",
       "/assets/retail-rollout-3.jpg",
     ],
