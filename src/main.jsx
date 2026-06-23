@@ -178,7 +178,7 @@ const projectShowcase = [
       "/assets/Oreillys Backroom3.jpeg",
       "/assets/Oreillys Backroom4.jpeg",
       "/assets/Oreillys Parts Counter.jpeg",
-      "/assets/Retail Oreillys Rollout 1.jpeg",
+      "/assets/Retail Rollout Oreillys 1.jpeg",
     ],
   },
   {
@@ -389,7 +389,6 @@ const projectShowcase = [
       autoplay
       loop
       muted
-      preload="metadata"
       playsInline
     />
   ) : (
