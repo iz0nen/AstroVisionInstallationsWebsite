@@ -25,6 +25,7 @@ function AstroVisionWebsite() {
   const [quoteOpen, setQuoteOpen] = useState(false);
   const [page, setPage] = useState("home");
   const [selectedImage, setSelectedImage] = useState(null);
+  const [activeProject, setActiveProject] = useState(null);
 
   useEffect(() => {
     const updatePage = () => {
@@ -122,7 +123,59 @@ function AstroVisionWebsite() {
     { src: "/assets/Signage nike 1.jpg", alt: "Nike retail project" },
     { src: "/assets/Signage nike 2.jpg", alt: "Nike womens display" },
   ];
-
+const projectShowcase = [
+  {
+    title: "Nike Retail Rollout",
+    count: "5 Photos",
+    description:
+      "Retail fixture installation, branded displays, signage, department setup, and rollout support.",
+    cover: "/assets/Signage nike 1.jpg",
+    images: [
+      "/assets/Signage nike 1.jpg",
+      "/assets/Signage nike 2.jpg",
+      "/assets/nike-kids-wall.jpg",
+      "/assets/nike-kids-finished-display.jpg",
+      "/assets/retail-rollout-3.jpg",
+    ],
+  },
+  {
+    title: "Skechers Work Wall",
+    count: "4 Photos",
+    description:
+      "Branded display wall installation with signage, graphics, product display elements, and finish details.",
+    cover: "/assets/skechers-work-wall.jpg",
+    images: [
+      "/assets/skechers-work-wall.jpg",
+      "/assets/workwear-display-wall.jpg",
+      "/assets/Signage Display Walls.jpeg",
+      "/assets/Signage Display Walls 2.jpeg",
+    ],
+  },
+  {
+    title: "Fixture & Shelving Installation",
+    count: "3 Photos",
+    description:
+      "Commercial shelving systems, fixture assembly, gondola setup, retail merchandising, and rollout execution.",
+    cover: "/assets/Fixture half built.jpg",
+    images: [
+      "/assets/Fixture half built.jpg",
+      "/assets/retail-rollout-1.jpg",
+      "/assets/retail-rollout-2.jpg",
+    ],
+  },
+  {
+    title: "Casework & Cashwrap Installation",
+    count: "3 Photos",
+    description:
+      "Cashwraps, casework, cabinets, counters, slatwall, and commercial finish installation support.",
+    cover: "/assets/cashwrap.jpg",
+    images: [
+      "/assets/cashwrap.jpg",
+      "/assets/residential-cabinets.jpg",
+      "/assets/slatwall-installation.jpg",
+    ],
+  },
+];
   return (
     <div className="site">
       <header className="header">
@@ -257,42 +310,97 @@ function AstroVisionWebsite() {
       )}
 
       {page === "gallery" && (
-        <main className="gallery-page">
-          <section className="gallery-intro">
-            <span className="eyebrow">PROJECT PORTFOLIO</span>
-            <h1>Projects Across Multiple Industries</h1>
-            <p>Our gallery showcases a selection of completed projects demonstrating quality workmanship, precision, and attention to detail.</p>
-          </section>
+  <main className="gallery-page">
+    <section className="gallery-intro">
+      <span className="eyebrow">PROJECT PORTFOLIO</span>
 
-          <section className="completed-projects">
-            <div className="section-head simple">
-              <div>
-                <p className="eyebrow">Projects</p>
-                <h2>Installation Work</h2>
-              </div>
-            </div>
+      <h1>Projects Across Multiple Industries</h1>
 
-            <section className="portfolio-showcase">
-              <div className="project-grid">
-                {galleryImages.map((image) => (
-                  <button className="gallery-image-button" key={image.src} onClick={() => openImage(image.src, image.alt)} aria-label={`Open ${image.alt}`}>
-                    <img src={image.src} alt={image.alt} />
-                  </button>
-                ))}
-              </div>
-            </section>
+      <p>
+        Explore completed installation projects organized by store, scope,
+        and project type. Select a project to view the full photo set.
+      </p>
+    </section>
 
-            <div className="gallery-video-section">
-              <div className="video-intro">
-                <p className="eyebrow">Project Walkthrough</p>
-                <p>A walkthrough look at retail fixture installation and project execution in progress.</p>
-              </div>
-              <video className="retail-video" src="/assets/retail-rollout-walkthrough.mp4" controls muted playsInline />
-            </div>
-          </section>
-        </main>
-      )}
+    <section className="premium-project-grid">
+      {projectShowcase.map((project, index) => (
+        <button
+          className="premium-project-card"
+          key={project.title}
+          onClick={() => setActiveProject(project)}
+        >
+          <div className="premium-project-image">
+            <img src={project.cover} alt={project.title} />
+          </div>
 
+          <div className="premium-project-content">
+            <span>{project.count}</span>
+            <h2>{project.title}</h2>
+            <p>{project.description}</p>
+            <strong>View Project →</strong>
+          </div>
+        </button>
+      ))}
+    </section>
+
+    <div className="gallery-video-section">
+      <div className="video-intro">
+        <p className="eyebrow">Project Walkthrough</p>
+        <p>
+          A walkthrough look at retail fixture installation and project
+          execution in progress.
+        </p>
+      </div>
+
+      <video
+        className="retail-video"
+        src="/assets/retail-rollout-walkthrough.mp4"
+        controls
+        muted
+        playsInline
+      />
+    </div>
+
+    {activeProject && (
+      <div className="project-viewer">
+        <div className="project-viewer-box">
+          <button
+            className="project-viewer-close"
+            onClick={() => setActiveProject(null)}
+          >
+            <X />
+          </button>
+
+          <div className="project-viewer-head">
+            <span className="eyebrow">Project Showcase</span>
+            <h2>{activeProject.title}</h2>
+            <p>{activeProject.description}</p>
+          </div>
+
+          <div className="project-viewer-main">
+            <img src={activeProject.cover} alt={activeProject.title} />
+          </div>
+
+          <div className="project-viewer-thumbs">
+            {activeProject.images.map((image) => (
+              <button
+                key={image}
+                onClick={() =>
+                  setSelectedImage({
+                    src: image,
+                    alt: activeProject.title,
+                  })
+                }
+              >
+                <img src={image} alt={activeProject.title} />
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    )}
+  </main>
+)}
       {page === "join" && (
         <main>
           <section className="page-hero compact">
