@@ -78,7 +78,7 @@ function AstroVisionWebsite() {
     {
       title: "Interior Signage, Displays & Graphics",
       icon: <PanelTop />,
-      text: "Interior wall & lIT/SEG signage, dimensional lettering, display systems, wall graphics, vinyl graphics, wayfinding systems, branded environments, window graphics, and corporate identity installations.",
+      text: "Interior wall & LIT/SEG signage, dimensional lettering, display systems, wall graphics, vinyl graphics, wayfinding systems, branded environments, window graphics, and corporate identity installations.",
     },
     {
       title: "Rough & Finish Carpentry",
