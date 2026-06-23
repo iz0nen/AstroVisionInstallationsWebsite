@@ -167,7 +167,7 @@ const projectShowcase = [
     title: "Fixture & Shelving Installation",
     count: "8 Photos",
     description:
-      "Commercial shelving systems, fixture assembly,  retail merchandising, and rollout execution.",
+      "Commercial shelving systems, fixture assembly, Gondolas",
     cover: "/assets/Oreillys Bulkrack.jpeg",
     images: [
       "/assets/Fixture half built.jpg",
@@ -178,6 +178,7 @@ const projectShowcase = [
       "/assets/Oreillys Backroom3.jpeg",
       "/assets/Oreillys Backroom4.jpeg",
       "/assets/Oreillys Parts Counter.jpeg",
+      "/assets/Retail Oreillys Rollout 1.jpeg",
     ],
   },
   {
@@ -210,7 +211,7 @@ const projectShowcase = [
   title: "Project Walkthroughs",
   count: "4 Videos",
   description:
-    "Store walkthroughs, completed projects, and final installations.",
+    "Store walkthroughs, completed projects.",
   cover: "/assets/Oreillys Frontroom.mp4",
   videos: [
     "/assets/Oreillys Frontroom.mp4",
@@ -260,7 +261,7 @@ const projectShowcase = [
               </div>
               <p className="eyebrow">Commercial Installation Contractor</p>
               <h1>Astro Vision Installations</h1>
-              <p className="tagline">Bringing Your Vision Above and Beyond Expectations.</p>
+              <p className="tagline">Bringing Your Vision Above and Beyond.</p>
               <p className="service-line">Professional Fixture Installation • Millwork • Casework • Interior Signage, Displays & Graphics • Rough & Finish Carpentry</p>
               <p className="summary">Delivering quality installation services</p>
               <div className="actions">
@@ -309,10 +310,17 @@ const projectShowcase = [
             </div>
             <div className="team-showcase-grid">
               <div className="team-showcase-card">
-                <img src="/assets/corey-working.jpg" alt="Retail signage, merchandising, and shelf installation" />
+                <img src="/assets/Cory Birdie.jpeg" alt="Dollys Bird installation" />
               </div>
+              
               <div className="team-showcase-card">
                 <img src="/assets/tim-working.jpg" alt="Cabinet and fixture installation" />
+              </div>
+              <div className="team-showcase-card">
+                <img src="/assets/corey-working.jpg" alt="Retail signage, merchandising, and shelf installation" />
+              </div>
+             <div className="team-showcase-card">
+                <img src="/assets/Timmy Signage.jpeg" alt="SEG installation" />
               </div>
             </div>
           </section>
@@ -378,6 +386,8 @@ const projectShowcase = [
     <video
       src={project.cover}
       controls
+      autoplay
+      loop
       muted
       preload="metadata"
       playsInline
