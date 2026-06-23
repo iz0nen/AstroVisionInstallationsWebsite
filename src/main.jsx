@@ -193,7 +193,8 @@ const projectShowcase = [
       "/assets/cashwrap.jpg",
       "/assets/residential-cabinets.jpg",
       "/assets/slatwall-installation.jpg",
-      "/assets/Aldi Breakroom.jpeg
+      "/assets/Aldi Breakroom.jpeg",
+      "/assets/Oreillys Counters.jpeg",
     ],
   },
   {
