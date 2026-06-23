@@ -461,7 +461,7 @@ const projectShowcase = [
         <video
           src={video}
           muted
-          autoplay
+          controls
           playsInline
         />
       </button>
