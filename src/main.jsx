@@ -128,7 +128,7 @@ const projectShowcase = [
     title: "Retail Rollouts",
     count: "5 Photos",
     description:
-      "Retail fixture installation, New Store Rollouts, Remodels, Gondola Setup (O'Reillys, Shoe Carnival, Napa Auto Parts).",
+      "Retail fixture installation, New Store Rollouts, Remodels, Gondola Setup <p>(O'Reillys, Shoe Carnival, Napa Auto Parts).</p>",
     cover: "/assets/Signage nike 2.jpg",
     images: [
       "/assets/Signage nike 1.jpg",
@@ -138,7 +138,7 @@ const projectShowcase = [
     ],
   },
   {
-    title: "Interior Graphics/Signage/Displays",
+    title: "Interior Graphics/Signage & LIT/SEG Displays",
     count: "4 Photos",
     description:
       "Branded display wall installation with signage, graphics, product display elements, and finish details.",
