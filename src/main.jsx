@@ -210,7 +210,7 @@ const projectShowcase = [
   title: "Project Walkthroughs",
   count: "4 Videos",
   description:
-    "Store walkthroughs, completed projects, rollout documentation, and final installations.",
+    "Store walkthroughs, completed projects, and final installations.",
   cover: "/assets/Oreillys Frontroom.mp4",
   videos: [
     "/assets/Oreillys Frontroom.mp4",
@@ -378,6 +378,7 @@ const projectShowcase = [
     <video
       src={project.cover}
       controls
+      muted
       preload="metadata"
       playsInline
     />
@@ -398,34 +399,6 @@ const projectShowcase = [
         </button>
       ))}
     </section>
-
-    <div className="gallery-video-section">
-      <div className="video-intro">
-        <p className="eyebrow">Project Walkthrough</p>
-        <p>
-          A walkthrough look at retail fixture installation and project
-          execution in progress.
-        </p>
-      </div>
-    <p>
-      <video
-        className="retail-video"
-        src="/assets/Oreillys Frontroom.mp4"
-        controls
-        muted
-        playsInline
-      />
-    </p>
-      <p>
-      <video
-        className="retail-video"
-        src="/assets/Oreillys Backroom.mp4"
-        controls
-        muted
-        playsInline
-      />
-      </p>
-    </div>
 
     {activeProject && (
       <div className="project-viewer">
