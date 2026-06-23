@@ -150,8 +150,8 @@ const projectShowcase = [
       "/assets/Dollys Doors.jpeg",
       "/assets/Dollys Pics.jpeg",
       "/assets/Lego Signage.jpeg",
-      "/assets/Lego Signage3.jpeg",
-      "/assets/Lego Signage4.jpeg",
+      "/assets/LegoSignage3.jpeg",
+      "/assets/LegoSignage4.jpeg",
       "/assets/skechers-work-wall.jpg",
       "/assets/workwear-display-wall.jpg",
       "/assets/Signage Display Walls.jpeg",
@@ -180,6 +180,7 @@ const projectShowcase = [
     images: [
       "/assets/Lego Merchandising2.jpeg",
       "/assets/Lego Merchandising.jpeg",
+      "/assets/LegoSignage2.jpeg",
     ],
   },
   {
@@ -192,6 +193,7 @@ const projectShowcase = [
       "/assets/cashwrap.jpg",
       "/assets/residential-cabinets.jpg",
       "/assets/slatwall-installation.jpg",
+      "/assets/Aldi Breakroom.jpeg
     ],
   },
   {
