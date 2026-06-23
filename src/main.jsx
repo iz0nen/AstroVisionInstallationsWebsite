@@ -365,7 +365,14 @@ const projectShowcase = [
 
       <video
         className="retail-video"
-        src="/assets/retail-rollout-walkthrough.mp4"
+        src="/assets/Oreillys Frontroom.mp4"
+        controls
+        muted
+        playsInline
+      />
+      <video
+        className="retail-video"
+        src="/assets/Oreillys Backroom.mp4"
         controls
         muted
         playsInline
