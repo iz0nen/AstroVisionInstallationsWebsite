@@ -385,11 +385,12 @@ const projectShowcase = [
   {project.videos ? (
     <video
       src={project.cover}
-      controls
-      autoplay
-      loop
       muted
       playsInline
+      autoPlay
+      loop
+      controls
+
     />
   ) : (
     <img
