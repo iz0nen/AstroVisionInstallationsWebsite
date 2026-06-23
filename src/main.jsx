@@ -363,7 +363,7 @@ const projectShowcase = [
           execution in progress.
         </p>
       </div>
-
+    <div>
       <video
         className="retail-video"
         src="/assets/Oreillys Frontroom.mp4"
@@ -371,6 +371,8 @@ const projectShowcase = [
         muted
         playsInline
       />
+    </div>
+      <div>
       <video
         className="retail-video"
         src="/assets/Oreillys Backroom.mp4"
@@ -378,6 +380,7 @@ const projectShowcase = [
         muted
         playsInline
       />
+      </div>
     </div>
 
     {activeProject && (
