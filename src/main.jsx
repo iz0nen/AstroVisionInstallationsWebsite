@@ -467,7 +467,6 @@ const projectShowcase = [
 </div>
           </div>
         </div>
-      </div>
     )}
   </main>
 )}
