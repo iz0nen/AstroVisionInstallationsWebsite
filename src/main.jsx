@@ -125,10 +125,10 @@ function AstroVisionWebsite() {
   ];
 const projectShowcase = [
   {
-    title: "Nike Retail Rollout",
+    title: "Retail Rollouts",
     count: "5 Photos",
     description:
-      "Retail fixture installation, branded displays, signage, department setup, and rollout support.",
+      "Retail fixture installation, New Store Rollouts, Remodels, Gondola Setup,.",
     cover: "/assets/Signage nike 1.jpg",
     images: [
       "/assets/Signage nike 1.jpg",
@@ -139,7 +139,7 @@ const projectShowcase = [
     ],
   },
   {
-    title: "Skechers Work Wall",
+    title: "Interior Graphics/Signage/Displays",
     count: "4 Photos",
     description:
       "Branded display wall installation with signage, graphics, product display elements, and finish details.",
@@ -155,7 +155,7 @@ const projectShowcase = [
     title: "Fixture & Shelving Installation",
     count: "3 Photos",
     description:
-      "Commercial shelving systems, fixture assembly, gondola setup, retail merchandising, and rollout execution.",
+      "Commercial shelving systems, fixture assembly,  retail merchandising, and rollout execution.",
     cover: "/assets/Fixture half built.jpg",
     images: [
       "/assets/Fixture half built.jpg",
