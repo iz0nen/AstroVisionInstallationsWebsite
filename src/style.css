@@ -347,15 +347,7 @@ a {
     padding: 56px 18px 80px;
   }
 
-  .hero-logo-card {
-    width: 96%;
-    padding: 14px !important;
-    border-radius: 22px;
-  }
 
-  .hero-logo {
-    width: 100%;
-  }
 }
 .summary {
   max-width: 720px;
