@@ -561,7 +561,6 @@ const goMedia = (direction) => {
             </div>
           </div>
         </section>
-      </main>
       )}
 
       <footer id="contact" className="footer">
