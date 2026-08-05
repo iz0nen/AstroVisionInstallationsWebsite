@@ -361,7 +361,7 @@ a {
 
 @media (max-width: 768px) {
   .hero-inner {
-    max-width: 100%;
+    max-width: 95%;
     padding: 56px 18px 80px;
   }
 
