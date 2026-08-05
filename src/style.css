@@ -299,9 +299,40 @@ a {
 }
 
 .hero-inner {
+  position: relative;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 90px 24px 120px;
   text-align: center;
+}
+
+.hero-logo-card {
+  width: min(850px, 92%);
+  max-width: none;
+  padding: 32px !important;
+  margin: 0 auto;
+
+  border-radius: 32px;
+
+  background:
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.16), transparent 36%),
+    linear-gradient(145deg, #0d1320, #07101f);
+
+  border: 1px solid rgba(147, 197, 253, 0.18);
+
+  box-shadow:
+    0 18px 48px rgba(0, 0, 0, 0.28);
+
+  transition: all 0.25s ease;
+}
+
+.hero-logo {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 35px rgba(59, 130, 246, 0.45));
 }
 
 .service-line {
@@ -312,15 +343,18 @@ a {
   text-align: center;
 }
 @media (max-width: 768px) {
-  .service-line {
-    white-space: normal;
-    max-width: 92%;
-    font-size: 1rem;
-    line-height: 1.6;
+  .hero-inner {
+    padding: 56px 18px 80px;
   }
 
-  .hero-inner {
-    max-width: 100%;
+  .hero-logo-card {
+    width: 96%;
+    padding: 14px !important;
+    border-radius: 22px;
+  }
+
+  .hero-logo {
+    width: 100%;
   }
 }
 .summary {
