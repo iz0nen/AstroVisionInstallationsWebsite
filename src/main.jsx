@@ -78,13 +78,9 @@ function AstroVisionWebsite() {
     {
       title: "Interior Signage, Displays & Graphics",
       icon: <PanelTop />,
-      text: "Interior wall & LIT/SEG signage, dimensional lettering, display systems, wall graphics, vinyl graphics, wayfinding systems, branded environments, window graphics, and corporate identity installations.",
+      text: "Interior wall & LIT/SEG signage, dimensional lettering, display systems, wall graphics, vinyl graphics, branded environments, window graphics, and corporate identity installations.",
     },
-    {
-      title: "Rough & Finish Carpentry",
-      icon: <Ruler />,
-      text: "Doors, hardware, trim, molding, wall panel systems, and detailed finish work.",
-    },
+  
   ];
 
   const industries = [
@@ -150,8 +146,6 @@ const projectShowcase = [
     cover: "/assets/Dollys Birdie.jpeg",
     images: [
       "/assets/Dollys Birdie.jpeg",
-      "/assets/Dollys Guitars.jpeg",
-      "/assets/Dollys Doors.jpeg",
       "/assets/Dollys Pics.jpeg",
       "/assets/Lego Signage.jpeg",
       "/assets/LegoSignage3.jpeg",
@@ -203,7 +197,6 @@ const projectShowcase = [
     cover: "/assets/cashwrap.jpg",
     images: [
       "/assets/cashwrap.jpg",
-      "/assets/residential-cabinets.jpg",
       "/assets/slatwall-installation.jpg",
       "/assets/Aldi Breakroom.jpeg",
       "/assets/Oreillys Counters.jpeg",
@@ -305,7 +298,7 @@ const goMedia = (direction) => {
               <p className="eyebrow">Commercial Installation Contractor</p>
               <h1>Astro Vision Installations</h1>
               <p className="tagline">Bringing Your Vision Above and Beyond.</p>
-              <p className="service-line">Professional Fixture Installation • Millwork • Casework • Interior Signage, Displays & Graphics • Rough & Finish Carpentry</p>
+              <p className="service-line">Professional Fixture Installation • Millwork • Casework • Interior Signage, Displays & Graphics</p>
               <p className="summary">Delivering quality installation services</p>
               <div className="actions">
                 <button onClick={() => setQuoteOpen(true)} className="btn">Request a Quote</button>
@@ -353,18 +346,12 @@ const goMedia = (direction) => {
             </div>
             <div className="team-showcase-grid">
               <div className="team-showcase-card">
-                <img src="/assets/Cory Birdie.jpeg" alt="Dollys Bird installation" />
+                <img src="/assets/corey-working.jpg" alt="Retail signage, merchandising, and shelf installation" />
               </div>
-              
               <div className="team-showcase-card">
                 <img src="/assets/tim-working.jpg" alt="Cabinet and fixture installation" />
               </div>
-              <div className="team-showcase-card">
-                <img src="/assets/corey-working.jpg" alt="Retail signage, merchandising, and shelf installation" />
-              </div>
-             <div className="team-showcase-card">
-                <img src="/assets/Timmy Signage.jpeg" alt="SEG installation" />
-              </div>
+              
             </div>
           </section>
 
@@ -536,7 +523,7 @@ const goMedia = (direction) => {
           <section className="page-hero compact">
             <p className="eyebrow">Join Our Team</p>
             <h1>Build With Astro Vision Installations</h1>
-            <p>We are looking for dependable, detail-oriented professionals interested in commercial fixture installation, millwork, cabinetry, signage, graphics, rough and finish carpentry projects.</p>
+            <p>We are looking for dependable, detail-oriented professionals interested in commercial fixture installation, millwork, casework, signage, & graphics projects.</p>
           </section>
           <section className="section join-section">
             <div className="two-col join-layout">
@@ -561,7 +548,7 @@ const goMedia = (direction) => {
               }}>
                 <div className="form-grid"><input name="firstName" placeholder="First Name" required /><input name="lastName" placeholder="Last Name" required /><input name="phone" placeholder="Phone Number" required /><input name="email" placeholder="Email Address" type="email" required /></div>
                 <input name="cityState" placeholder="City / State" />
-                <select name="positionInterest" defaultValue="" required><option value="" disabled>Position / Work Interest</option><option>Fixture Installation</option><option>Millwork Installation</option><option>Cabinetry Installation</option><option>Interior Signage, Displays & Graphics</option><option>Finish Carpentry</option><option>General Helper / Labor Support</option></select>
+                <select name="positionInterest" defaultValue="" required><option value="" disabled>Position / Work Interest</option><option>Fixture Installation</option><option>Millwork Installation</option><option>Casework Installation</option><option>Interior Signage, Displays & Graphics</option><option>Merchandising<option></option><option>General Helper / Labor Support</option></select>
                 <div className="form-grid"><input name="yearsExperience" placeholder="Years of Experience" /><input name="availability" placeholder="Availability / Start Date" /></div>
                 <select name="travelAvailable" defaultValue=""><option value="" disabled>Available to Travel?</option><option>Yes</option><option>No</option><option>Sometimes / Depends on project</option></select>
                 <select name="transportation" defaultValue=""><option value="" disabled>Reliable Transportation?</option><option>Yes</option><option>No</option></select>
@@ -607,7 +594,7 @@ const goMedia = (direction) => {
               <input type="hidden" name="form-name" value="quote-request" />
               <div className="form-grid"><input name="company" placeholder="Company Name" /><input name="name" placeholder="Contact Name" /><input name="phone" placeholder="Phone Number" /><input name="email" placeholder="Email Address" type="email" /></div>
               <input name="location" placeholder="Project Location" />
-              <select name="projectType" defaultValue=""><option value="" disabled>Project Type</option><option>Fixture Installation</option><option>Millwork</option><option>Cabinetry</option><option>Interior Signage, Displays & Graphics</option><option>Finish Carpentry</option><option>Multiple Services</option></select>
+              <select name="projectType" defaultValue=""><option value="" disabled>Project Type</option><option>Fixture Installation</option><option>Millwork</option><option>Casework</option><option>Interior Signage, Displays & Graphics</option><option>Merchandising</option><option>Multiple Services</option></select>
               <div className="form-grid"><input name="startDate" placeholder="Estimated Start Date" /><input name="deadline" placeholder="Completion Deadline" /></div>
               <textarea name="description" placeholder="Project Description"></textarea>
               <textarea name="notes" placeholder="Site Access Requirements / Additional Notes"></textarea>
