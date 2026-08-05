@@ -1030,17 +1030,33 @@ a {
    13. JOIN OUR TEAM PAGE
 ========================================================= */
 
+/* Join Our Team top header */
 .page-hero.compact {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto !important;
-  padding-left: 0 !important;
-  padding-right: 750px !important;
+  padding: 60px 28px 20px !important;
+  text-align: center;
 }
 
-.page-hero.compact h1,
-.page-hero.compact p {
-  max-width: 900px !important;
+.page-hero.compact h1 {
+  max-width: 850px !important;
+  margin: 18px auto 24px;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.08;
+}
+
+.page-hero.compact > p:last-child {
+  max-width: 760px !important;
+  margin: 0 auto;
+  color: #cbd5e1;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.page-hero.compact .eyebrow {
+  display: inline-block;
+  margin: 0 auto;
 }
 
 .join-section {
