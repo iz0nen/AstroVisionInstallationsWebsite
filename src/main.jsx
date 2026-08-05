@@ -355,19 +355,21 @@ const goMedia = (direction) => {
             </div>
           </section>
 
-          <section className="section tinted-dark">
-            <div className="two-col">
-              <div>
-                <p className="eyebrow">Why Choose Us</p>
-                <h2>Reliable Workmanship for Commercial Project Teams.</h2>
-              </div>
-              <div className="checks">
-                {chooseUs.map((item) => (
-                  <div className="check" key={item}><CheckCircle /> <span>{item}</span></div>
-                ))}
-              </div>
-            </div>
-          </section>
+          <section className="section tinted-dark why-choose-us">
+  <div className="field-experience-header">
+    <span className="field-badge">WHY CHOOSE US</span>
+    <h2>Reliable Workmanship for Commercial Project Teams.</h2>
+  </div>
+
+  <div className="checks">
+    {chooseUs.map((item) => (
+      <div className="check" key={item}>
+        <CheckCircle />
+        <span>{item}</span>
+      </div>
+    ))}
+  </div>
+</section>
 
           <section id="industries" className="section center">
             <p className="eyebrow">Industries We Serve</p>
