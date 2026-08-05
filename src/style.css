@@ -494,7 +494,7 @@ a {
 }
 
 .about .copy {
-  max-width: 980px;
+  max-width: 1200px;
   margin: 36px auto 0;
   padding: 42px;
   border: 1px solid rgba(147, 197, 253, 0.18);
@@ -507,7 +507,7 @@ a {
 
 .about .copy p {
   color: #cbd5e1;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.9;
 }
 
