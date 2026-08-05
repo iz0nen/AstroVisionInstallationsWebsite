@@ -299,7 +299,7 @@ a {
 
 .hero-logo {
   display: block;
-  width: 80%;
+  width: 95%;
   height: auto;
   margin: 0 auto;
 
@@ -366,7 +366,7 @@ a {
 
   .hero-logo-card {
     width: 94%;
-    padding: 26px 16px 34px;
+    padding: 26px 26px 34px;
     border-radius: 22px;
   }
 
