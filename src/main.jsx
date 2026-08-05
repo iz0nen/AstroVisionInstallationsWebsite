@@ -296,7 +296,7 @@ const goMedia = (direction) => {
                 <img src="/assets/astro-vision-main-logo.jpg" alt="Astro Vision Installations main logo" className="hero-logo" />
               </div>
               <p className="eyebrow">Commercial Installation Contractor</p>
-              <h1>Astro Vision Installations</h1>
+              <h1></h1>
               <p className="tagline">Bringing Your Vision Above and Beyond.</p>
               <p className="service-line">Professional Fixture Installation • Millwork • Casework • Interior Signage, Displays & Graphics</p>
               <p className="summary">Delivering quality installation services</p>
