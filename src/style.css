@@ -811,7 +811,7 @@ a {
 .gallery-hero h1,
 .gallery-intro h1 {
   margin: 18px 0 20px;
-  font-size: clamp(42px, 6vw, 72px);
+  font-size: clamp(36px, 5vw, 64px);
 }
 
 .gallery-hero p,
@@ -1042,7 +1042,7 @@ a {
 .page-hero.compact h1 {
   max-width: 850px !important;
   margin: 18px auto 24px;
-  font-size: clamp(40px, 5vw, 64px);
+  font-size: clamp(36px, 5vw, 64px);
   line-height: 1.08;
 }
 
