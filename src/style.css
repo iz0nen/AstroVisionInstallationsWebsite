@@ -300,7 +300,7 @@ a {
 
 .hero-inner {
   position: relative;
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 90px 24px 120px;
   text-align: center;
@@ -328,7 +328,7 @@ a {
 
 .hero-logo {
   display: block;
-  width: 100%;
+  width: 80%;
   max-width: none;
   height: auto;
   object-fit: contain;
