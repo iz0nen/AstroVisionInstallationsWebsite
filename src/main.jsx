@@ -557,6 +557,7 @@ const goMedia = (direction) => {
                 <input name="resumeLink" placeholder="Resume / Portfolio Link, if available" />
                 <button className="btn">Submit Application</button><small>Applications are sent to astrovisioninstallations@gmail.com</small>
               </form>
+              </form>
             </div>
           </div>
           </section>
