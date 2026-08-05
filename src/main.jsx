@@ -559,6 +559,7 @@ const goMedia = (direction) => {
               </form>
             </div>
           </section>
+          </section>
         </main>
       )}
 
