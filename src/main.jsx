@@ -397,7 +397,7 @@ const goMedia = (direction) => {
       {page === "gallery" && (
   <main className="gallery-page">
     <section className="gallery-intro">
-      <span className="eyebrow">PROJECT PORTFOLIO</span>
+      <span className="field-badge">PROJECT PORTFOLIO</span>
 
       <h1>Projects Across Multiple Industries</h1>
 
@@ -524,7 +524,7 @@ const goMedia = (direction) => {
       {page === "join" && (
         <main>
           <section className="page-hero compact">
-            <p className="eyebrow">Join Our Team</p>
+            <span className="field-badge">JOIN OUR TEAM</span>
             <h1>Build With Astro Vision Installations</h1>
             <p>We are looking for dependable, detail-oriented professionals interested in commercial fixture installation, millwork, casework, signage, & graphics projects.</p>
           </section>
