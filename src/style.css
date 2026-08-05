@@ -366,7 +366,7 @@ a {
   }
 
   .hero-logo-card {
-    width: 94%;
+    width: 90%;
     padding: 14px;
     border-radius: 22px;
   }
@@ -379,7 +379,7 @@ a {
   }
 
   .summary {
-    max-width: 92%;
+    max-width: 90%;
     font-size: 16px;
   }
 }
