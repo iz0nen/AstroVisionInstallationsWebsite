@@ -359,17 +359,22 @@ a {
   margin-top: 36px;
 }
 
-@media (max-width: 748px) {
+@media (max-width: 768px) {
   .hero-inner {
-    max-width: 95%;
     padding: 56px 18px 80px;
   }
 
   .hero-logo-card {
-    width: 90%;
-    padding: 14px;
+    width: 92%;
+    padding: 16px;
     border-radius: 22px;
   }
+
+  .hero-logo {
+    width: 92%;
+    margin: 0 auto;
+  }
+}
 
   .service-line {
     max-width: 92%;
