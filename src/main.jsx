@@ -311,8 +311,9 @@ const goMedia = (direction) => {
             <div className="two-col">
               <div>
                 <span className="field-badge">ABOUT US</span>
-                <h2>Bringing Visions to Life Through Precision, Partnership, and Outstanding Performance.</h2>
-                <h3>Concepts to Completion</h3>
+                <h2>Bringing Visions to Life </h2>
+                  <h3>Through Precision, Partnership, and Outstanding Performance.</h3>
+                <h2>Concepts to Completion</h>
               </div>
               <div className="copy">
                 <p>At Astro Vision Installations, we believe every successful project begins with a vision and is defined by the quality of its execution. With over 15 years of hands-on installation experience, we partner with businesses, retailers, and commercial clients to transform ideas into professional, functional environments that leave a lasting impression and support long-term success.</p>
