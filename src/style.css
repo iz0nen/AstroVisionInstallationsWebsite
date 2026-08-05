@@ -241,41 +241,72 @@ a {
   text-align: center;
 }
 
-/* =========================
-   HERO LOGO CONTAINER
-========================= */
+/* =========================================================
+   HERO LOGO / HERO CONTENT
+========================================================= */
+
+.hero-inner {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 90px 24px 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
 
 .hero-logo-card {
-  padding: 20px !important;
-  max-width: 600px;
+  width: min(720px, 90%);
   margin: 0 auto;
+  padding: 24px;
 
-  border-radius: 28px;
+  border-radius: 30px;
 
   background:
-    radial-gradient(circle at top right, rgba(37,99,235,0.16), transparent 36%),
-    linear-gradient(145deg, #0d1320, #07101f);
+    radial-gradient(
+      circle at top right,
+      rgba(37, 99, 235, 0.16),
+      transparent 36%
+    ),
+    linear-gradient(
+      145deg,
+      #0d1320,
+      #07101f
+    );
 
-  border: 1px solid rgba(147,197,253,0.18);
+  border: 1px solid rgba(147, 197, 253, 0.18);
 
-  box-shadow: 0 18px 48px rgba(0,0,0,0.28);
+  box-shadow:
+    0 18px 48px rgba(0, 0, 0, 0.28);
 
-  transition: all 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .hero-logo-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(96,165,250,0.65);
+
+  border-color: rgba(96, 165, 250, 0.65);
 
   box-shadow:
-    0 20px 55px rgba(37,99,235,0.28);
+    0 20px 55px rgba(37, 99, 235, 0.28);
 }
+
 .hero-logo {
-  width: 80%;
-  max-width: 550px;
+  display: block;
+  width: 100%;
   height: auto;
+  margin: 0 auto;
+
   object-fit: contain;
-  filter: drop-shadow(0 0 35px rgba(59, 130, 246, 0.45));
+
+  filter:
+    drop-shadow(0 0 35px rgba(59, 130, 246, 0.45));
 }
 
 .eyebrow {
@@ -293,65 +324,27 @@ a {
 }
 
 .tagline {
+  margin-top: 22px;
   color: #bfdbfe;
   font-size: clamp(25px, 3vw, 36px);
   font-weight: 800;
 }
 
-.hero-inner {
-  position: relative;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 90px 24px 120px;
-  text-align: center;
-}
-
-.hero-logo-card {
-  width: min(850px, 92%);
-  max-width: none;
-  padding: 32px !important;
-  margin: 0 auto;
-
-  border-radius: 32px;
-
-  background:
-    radial-gradient(circle at top right, rgba(37, 99, 235, 0.16), transparent 36%),
-    linear-gradient(145deg, #0d1320, #07101f);
-
-  border: 1px solid rgba(147, 197, 253, 0.18);
-
-  box-shadow:
-    0 18px 48px rgba(0, 0, 0, 0.28);
-
-  transition: all 0.25s ease;
-}
-
-.hero-logo {
-  display: block;
-  width: 80%;
-  max-width: none;
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 0 35px rgba(59, 130, 246, 0.45));
-}
-
 .service-line {
-  font-size: 1.25rem;
   max-width: 1200px;
-  margin: 0 auto;
-  white-space: nowrap;
+  margin: 18px auto 0;
+
+  font-size: 1.25rem;
+  line-height: 1.6;
   text-align: center;
-}
-@media (max-width: 768px) {
-  .hero-inner {
-    padding: 56px 18px 80px;
-  }
 
-
+  white-space: nowrap;
 }
+
 .summary {
   max-width: 720px;
-  margin: 0 auto;
+  margin: 18px auto 0;
+
   color: #94a3b8;
   font-size: 17px;
   line-height: 1.7;
@@ -361,10 +354,35 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
   gap: 16px;
   margin-top: 36px;
 }
 
+@media (max-width: 768px) {
+  .hero-inner {
+    max-width: 100%;
+    padding: 56px 18px 80px;
+  }
+
+  .hero-logo-card {
+    width: 94%;
+    padding: 14px;
+    border-radius: 22px;
+  }
+
+  .service-line {
+    max-width: 92%;
+    font-size: 1rem;
+    line-height: 1.6;
+    white-space: normal;
+  }
+
+  .summary {
+    max-width: 92%;
+    font-size: 16px;
+  }
+}
 
 /* =========================================================
    05. GENERAL SECTIONS / LAYOUT
