@@ -68,12 +68,12 @@ function AstroVisionWebsite() {
     {
       title: "Millwork Installation",
       icon: <Drill />,
-      text: "Custom millwork, feature walls, cashwraps, trim packages, reception/office desks, wall panel systems, custom woodwork, and specialty installations.",
+      text: "Custom millwork, feature walls, cashwraps, reception/office desks, wall panel systems, custom woodwork, and specialty installations.",
     },
     {
       title: "Casework Installation",
       icon: <RectangleHorizontal />,
-      text: "Commercial casework, office cabinetry, built-ins, storage systems, cabinet & countertop installations.",
+      text: "Commercial casework, office cabinetry, storage systems, cabinet & countertop installations.",
     },
     {
       title: "Interior Signage, Displays & Graphics",
@@ -181,7 +181,7 @@ const projectShowcase = [
     title: "Merchandising",
     count: "3 Photos",
     description:
-      "Retail Merchandising, Planogram Execution (Wal-mart, Oreillys, Harris Teeter)",
+      "Retail Merchandising, Planogram Execution (Wal-mart, Oreillys)",
     cover: "/assets/Lego Merchandising.jpeg",
     images: [
       "/assets/Lego Merchandising2.jpeg",
@@ -193,7 +193,7 @@ const projectShowcase = [
     title: "Casework & Cashwrap Installation",
     count: "5 Photos",
     description:
-      "Cashwraps, casework, cabinets, counters, slatwall, and commercial finish installation support(Shoe Carnival, Aldi, O'Reillys, Residential).",
+      "Cashwraps, casework, cabinets, counters, slatwall, and commercial finish installation support(Shoe Carnival, Aldi, O'Reillys).",
     cover: "/assets/cashwrap.jpg",
     images: [
       "/assets/cashwrap.jpg",
@@ -312,7 +312,7 @@ const goMedia = (direction) => {
               <div>
                 <p className="eyebrow">About Us</p>
                 <h2>Bringing Visions to Life Through Precision, Partnership, and Outstanding Performance.</h2>
-                <h2>Concepts to Completion</h2>
+                <h3>Concepts to Completion</h3>
               </div>
               <div className="copy">
                 <p>At Astro Vision Installations, we believe every successful project begins with a vision and is defined by the quality of its execution. With over 15 years of hands-on installation experience, we partner with businesses, retailers, and commercial clients to transform ideas into professional, functional environments that leave a lasting impression and support long-term success.</p>
