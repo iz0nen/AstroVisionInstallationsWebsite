@@ -310,7 +310,7 @@ const goMedia = (direction) => {
           <section className="section about">
             <div className="two-col">
               <div>
-                <p className="eyebrow">About Us</p>
+                <span className="field-badge">ABOUT US</span>
                 <h2>Bringing Visions to Life Through Precision, Partnership, and Outstanding Performance.</h2>
                 <h3>Concepts to Completion</h3>
               </div>
@@ -325,7 +325,7 @@ const goMedia = (direction) => {
           </section>
 
           <section id="services" className="section tinted">
-            <p className="eyebrow">Our Services</p>
+            <span className="field-badge">OUR SERVICES</span>
             <h2>Installation Services Built Around Execution.</h2>
             <div className="cards">
               {services.map((service) => (
@@ -372,7 +372,7 @@ const goMedia = (direction) => {
 </section>
 
           <section id="industries" className="section center">
-            <p className="eyebrow">Industries We Serve</p>
+            <span className="field-badge">INDUSTRIES WE SERVE</span>
             <h2>Supporting Commercial Spaces From Rollout to Completion.</h2>
             <div className="industries">
               {industries.map((industry) => <div key={industry}>{industry}</div>)}
