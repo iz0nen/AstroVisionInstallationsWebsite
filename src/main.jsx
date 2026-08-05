@@ -548,7 +548,7 @@ const goMedia = (direction) => {
               }}>
                 <div className="form-grid"><input name="firstName" placeholder="First Name" required /><input name="lastName" placeholder="Last Name" required /><input name="phone" placeholder="Phone Number" required /><input name="email" placeholder="Email Address" type="email" required /></div>
                 <input name="cityState" placeholder="City / State" />
-                <select name="positionInterest" defaultValue="" required><option value="" disabled>Position / Work Interest</option><option>Fixture Installation</option><option>Millwork Installation</option><option>Casework Installation</option><option>Interior Signage, Displays & Graphics</option><option>Merchandising<option></option><option>General Helper / Labor Support</option></select>
+                <select name="positionInterest" defaultValue="" required><option value="" disabled>Position / Work Interest</option><option>Fixture Installation</option><option>Millwork Installation</option><option>Casework Installation</option><option>Interior Signage, Displays & Graphics</option><option>Merchandising</option><option>General Helper / Labor Support</option></select>
                 <div className="form-grid"><input name="yearsExperience" placeholder="Years of Experience" /><input name="availability" placeholder="Availability / Start Date" /></div>
                 <select name="travelAvailable" defaultValue=""><option value="" disabled>Available to Travel?</option><option>Yes</option><option>No</option><option>Sometimes / Depends on project</option></select>
                 <select name="transportation" defaultValue=""><option value="" disabled>Reliable Transportation?</option><option>Yes</option><option>No</option></select>
@@ -557,7 +557,6 @@ const goMedia = (direction) => {
                 <input name="resumeLink" placeholder="Resume / Portfolio Link, if available" />
                 <button className="btn">Submit Application</button><small>Applications are sent to astrovisioninstallations@gmail.com</small>
               </form>
-            </div>
           </div>
         </section>
       </main>
