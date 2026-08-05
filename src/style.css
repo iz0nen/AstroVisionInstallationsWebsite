@@ -359,7 +359,7 @@ a {
   margin-top: 36px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 748px) {
   .hero-inner {
     max-width: 95%;
     padding: 56px 18px 80px;
