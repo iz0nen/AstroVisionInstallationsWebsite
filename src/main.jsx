@@ -558,7 +558,7 @@ const goMedia = (direction) => {
                 <button className="btn">Submit Application</button><small>Applications are sent to astrovisioninstallations@gmail.com</small>
               </form>
             </div>
-          </section>
+          </div>
           </section>
         </main>
       )}
