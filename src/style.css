@@ -475,7 +475,7 @@ a {
 }
 
 .about {
-  max-width: 1300px;
+  max-width: 1280px;
   text-align: center;
 }
 
@@ -494,7 +494,7 @@ a {
 }
 
 .about .copy {
-  max-width: 1300px;
+  max-width: 1280px;
   margin: 36px auto 0;
   padding: 42px;
   border: 1px solid rgba(147, 197, 253, 0.18);
