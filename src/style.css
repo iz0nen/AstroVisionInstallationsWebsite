@@ -157,7 +157,7 @@ a {
 .mobile-nav button,
 .mobile-nav a {
   width: 100%;
-  padding: 15px 20px;
+  padding: 10px 14px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
   background: linear-gradient(135deg, #0b214d, #13387d);
