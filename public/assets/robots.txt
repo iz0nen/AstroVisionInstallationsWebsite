@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://astrovisioninstallations.one/sitemap.xml
