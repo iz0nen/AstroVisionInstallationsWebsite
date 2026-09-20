@@ -92,12 +92,18 @@ export default function ReviewCaptureWidget({ config = DEFAULT_SAAS_CONFIG }) {
       gap: "8px"
     },
     logo: {
-      width: "100px",
+      width: "125px",
       height: "75px",
       objectFit: "contain",
       borderRadius: "4px"
     },
-    title: { fontSize: "13px", fontWeight: "600", margin: 0, letterSpacing: "0.3px" },
+    title: { 
+    fontSize: "13px", 
+    fontWeight: "600", 
+    margin: 0, 
+    letterSpacing: "0.3px",
+    lineHeight: "32px"            // 👈 Added to perfectly center your "Feedback" text with the new logo height
+  },
     closeBtn: { background: "none", border: "none", color: "#9ca3af", cursor: "pointer", padding: "2px" },
     body: { padding: "16px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" },
     text: { fontSize: "13px", color: "#9ca3af", lineHeight: "1.4", marginBottom: "12px" },
