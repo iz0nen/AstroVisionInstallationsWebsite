@@ -9,7 +9,7 @@ import emailjs from "@emailjs/browser";
 // =========================================================================
 const DEFAULT_SAAS_CONFIG = {
   brandName: "Astro Vision",
-  logoUrl: "://githubusercontent.com/main/public/assets/astro-vision-header-logo.png", // Replace with actual hosted client graphic
+  logoUrl: "https://raw.githubusercontent.com/iz0nen/AstroVisionInstallationsWebsite/main/public/assets/astro-vision-header-logo.png", // Replace with actual hosted client graphic
   primaryColor: "#2563eb",                 // Branding emphasis color
   secondaryColor: "#60a5fa",               // Text link anchor color
   promptText: "How would you rate your recent commercial installation experience with our crew?",
