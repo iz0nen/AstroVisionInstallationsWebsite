@@ -19,6 +19,8 @@ import {
   Home,
 } from "lucide-react";
 import "./style.css";
+import ReviewCaptureWidget from "./components/ReviewCaptureWidget";
+
 
 function AstroVisionWebsite() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -679,6 +681,9 @@ const goMedia = (direction) => {
     )}
   </div>
 )}
+      <ReviewCaptureWidget 
+        googleReviewUrl="https://google.com" 
+      />
     </div>
   );
 }
