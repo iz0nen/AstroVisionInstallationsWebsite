@@ -17,7 +17,7 @@ export default function ReviewCaptureWidget({ googleReviewUrl }) {
 
   const handleStarClick = (selectedRating) => {
     setRating(selectedRating);
-    if (selectedRating >= 4) {
+    if (selectedRating >= 3) {
       setStep("positiveRedirect");
     } else {
       setStep("internalFeedback");
