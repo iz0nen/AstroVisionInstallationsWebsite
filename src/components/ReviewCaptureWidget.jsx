@@ -4,15 +4,14 @@ import emailjs from "@emailjs/browser";
 
 export default function ReviewCaptureWidget() {
   const [isOpen, setIsOpen] = useState(true);
-  const [step, setStep] = useState("rating"); 
+  const [step, setStep] = useState("form"); // "form" or "complete"
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
   const [feedbackText, setFeedbackText] = useState("");
   const [isSending, setIsSending] = useState(false);
 
   // =========================================================
-  // 🔑 STEP 2 EMAIL INTEGRATION KEYS
-  // Replace these text strings with your actual keys from your EmailJS portal dashboard!
+  // 🔑 EMAIL INTEGRATION KEYS
   // =========================================================
   const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
   const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -21,17 +20,13 @@ export default function ReviewCaptureWidget() {
   // Your real, verified Google Place ID review link
   const GOOGLE_REVIEW_URL = "https://g.page/r/CeilsGq7gXtVECE/review";
 
-  const handleStarClick = (selectedRating) => {
-    setRating(selectedRating);
-    if (selectedRating >= 3) {
-      setStep("positiveRedirect");
-    } else {
-      setStep("internalFeedback");
-    }
-  };
-
   const handleFeedbackSubmit = (e) => {
     e.preventDefault();
+    if (rating === 0) {
+      alert("Please select a rating before submitting.");
+      return;
+    }
+    
     setIsSending(true);
 
     const templateParams = {
@@ -48,6 +43,7 @@ export default function ReviewCaptureWidget() {
       .catch((error) => {
         console.error("Failed to transmit form payload:", error);
         setIsSending(false);
+        // Transition to complete anyway so the user experience doesn't break
         setStep("complete");
       });
   };
@@ -60,7 +56,7 @@ export default function ReviewCaptureWidget() {
       position: "fixed",
       bottom: "16px",
       right: "16px",
-      width: "250px",
+      width: "260px",
       backgroundColor: "#0d0f12",
       border: "2px solid #2563eb",
       borderRadius: "10px",
@@ -82,7 +78,7 @@ export default function ReviewCaptureWidget() {
     closeBtn: { background: "none", border: "none", color: "#9ca3af", cursor: "pointer", padding: "2px" },
     body: { padding: "16px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" },
     text: { fontSize: "13px", color: "#9ca3af", lineHeight: "1.4", marginBottom: "12px" },
-    starsRow: { display: "flex", gap: "6px", margin: "4px 0" },
+    starsRow: { display: "flex", gap: "6px", margin: "4px 0 12px 0" },
     actionBtn: {
       width: "100%",
       backgroundColor: "#2563eb",
@@ -97,6 +93,16 @@ export default function ReviewCaptureWidget() {
       alignItems: "center",
       justifyContent: "center",
       gap: "6px"
+    },
+    secondaryLink: {
+      fontSize: "12px",
+      color: "#60a5fa",
+      textDecoration: "underline",
+      marginTop: "12px",
+      cursor: "pointer",
+      background: "none",
+      border: "none",
+      padding: 0
     },
     textArea: {
       width: "100%",
@@ -122,9 +128,10 @@ export default function ReviewCaptureWidget() {
         </button>
       </div>
 
-      {step === "rating" && (
+      {step === "form" && (
         <div style={theme.body}>
           <p style={theme.text}>How would you rate your recent commercial installation experience with our crew?</p>
+          
           <div style={theme.starsRow}>
             {[1, 2, 3, 4, 5].map((star) => (
               <Star
@@ -135,40 +142,15 @@ export default function ReviewCaptureWidget() {
                 color={star <= (hoverRating || rating) ? "#eab308" : "#475569"}
                 onMouseEnter={() => setHoverRating(star)}
                 onMouseLeave={() => setHoverRating(0)}
-                onClick={() => handleStarClick(star)}
+                onClick={() => setRating(star)}
               />
             ))}
           </div>
-        </div>
-      )}
 
-      {step === "positiveRedirect" && (
-        <div style={theme.body}>
-          <CheckCircle size={32} color="#22c55e" style={{ marginBottom: "10px" }} />
-          <p style={theme.text}>Awesome to hear! Would you mind sharing your experience on Google to help our business grow?</p>
-          <a 
-            href={GOOGLE_REVIEW_URL} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            style={{ ...theme.actionBtn, textDecoration: "none" }}
-            onClick={() => setIsOpen(false)}
-          >
-            Leave Google Review <Star size={14} fill="white" />
-          </a>
-        </div>
-      )}
-
-      {step === "internalFeedback" && (
-        <div style={theme.body}>
-          <div style={{ position: "relative", display: "inline-block", marginBottom: "10px" }}>
-            <MessageSquare size={36} color="#eab308" />
-            <span style={{ position: "absolute", top: "45%", left: "50%", transform: "translate(-50%, -50%)", color: "#0d0f12", fontWeight: "bold", fontSize: "14px" }}>!</span>
-          </div>
-          <p style={theme.text}>We want to ensure absolute satisfaction. Please let us know how we can improve our service:</p>
           <form onSubmit={handleFeedbackSubmit} style={{ width: "100%" }}>
             <textarea
               style={theme.textArea}
-              placeholder="Type your feedback here..."
+              placeholder="Tell us about your experience..."
               value={feedbackText}
               onChange={(e) => setFeedbackText(e.target.value)}
               required
@@ -183,7 +165,38 @@ export default function ReviewCaptureWidget() {
       {step === "complete" && (
         <div style={theme.body}>
           <CheckCircle size={32} color="#22c55e" style={{ marginBottom: "10px" }} />
-          <p style={{ ...theme.text, marginBottom: 0 }}>Thank you for your valuable feedback! We have received your notes privately.</p>
+          
+          {rating >= 4 ? (
+            <>
+              <p style={theme.text}>
+                Thank you for the fantastic feedback! Would you mind sharing your experience on Google to help us grow?
+              </p>
+              <a 
+                href={GOOGLE_REVIEW_URL} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={{ ...theme.actionBtn, textDecoration: "none" }}
+                onClick={() => setIsOpen(false)}
+              >
+                Leave Google Review <Star size={14} fill="white" />
+              </a>
+            </>
+          ) : (
+            <>
+              <p style={{ ...theme.text, marginBottom: "8px" }}>
+                Thank you. We have received your notes privately and our management team will review them immediately to make things right.
+              </p>
+              <a 
+                href={GOOGLE_REVIEW_URL} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={theme.secondaryLink}
+                onClick={() => setIsOpen(false)}
+              >
+                Continue to Google Business Profile
+              </a>
+            </>
+          )}
         </div>
       )}
     </div>
