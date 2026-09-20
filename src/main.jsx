@@ -29,15 +29,36 @@ function AstroVisionWebsite() {
   const [currentMediaIndex, setCurrentMediaIndex] = useState(0);
   const [projectPreviewIndex, setProjectPreviewIndex] = useState(0);
 
-  useEffect(() => {
+    useEffect(() => {
     const updatePage = () => {
       const hash = window.location.hash.replace("#", "");
 
-      if (hash === "gallery" || hash === "join") {
-        setPage(hash);
+      if (hash === "gallery") {
+        setPage("gallery");
+        // Target high-intent commercial keywords for your showcase
+        document.title = "Commercial & Retail Installation Portfolio | AstroVision";
+        updateMetaDescription("View our completed retail rollouts, custom fixture setups, millwork, and interior signage installations.");
+      } else if (hash === "join") {
+        setPage("join");
+        document.title = "Join Our Installation Team | AstroVision Careers";
+        updateMetaDescription("Apply to join AstroVision Installations. We are looking for experienced fixtures, millwork, and casework installers.");
       } else {
         setPage("home");
+        // Core landing page optimizations mapping to your industries
+        document.title = "AstroVision Installations | Retail Fixtures & Millwork Setup";
+        updateMetaDescription("Professional commercial fixture installation, custom millwork, casework, and interior retail signage rollouts nationwide.");
       }
+    };
+
+    // Helper function to update the meta tag dynamically
+    const updateMetaDescription = (text) => {
+      let metaDesc = document.querySelector('meta[name="description"]');
+      if (!metaDesc) {
+        metaDesc = document.createElement('meta');
+        metaDesc.name = 'description';
+        document.head.appendChild(metaDesc);
+      }
+      metaDesc.setAttribute('content', text);
     };
 
     updatePage();
@@ -45,6 +66,7 @@ function AstroVisionWebsite() {
 
     return () => window.removeEventListener("hashchange", updatePage);
   }, []);
+
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
