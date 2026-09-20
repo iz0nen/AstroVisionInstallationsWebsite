@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Star, X, CheckCircle, Send, MessageSquareAlert } from "lucide-react";
+import { Star, X, CheckCircle, Send, MessageSquare } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 export default function ReviewCaptureWidget({ googleReviewUrl }) {
@@ -118,7 +118,6 @@ export default function ReviewCaptureWidget({ googleReviewUrl }) {
         <div style={theme.body}>
           <p style={theme.text}>How would you rate your recent commercial installation experience with our crew?</p>
           <div style={theme.starsRow}>
-            {/* Fixed: Re-inserted the array matrix sequence correctly here */}
             {[1, 2, 3, 4, 5].map((star) => (
               <Star
                 key={star}
@@ -153,7 +152,11 @@ export default function ReviewCaptureWidget({ googleReviewUrl }) {
 
       {step === "internalFeedback" && (
         <div style={theme.body}>
-          <MessageSquareAlert size={40} color="#eab308" style={{ marginBottom: "12px" }} />
+          {/* Swapped style node layout block here */}
+          <div style={{ position: "relative", display: "inline-block", marginBottom: "12px" }}>
+            <MessageSquare size={44} color="#eab308" />
+            <span style={{ position: "absolute", top: "45%", left: "50%", transform: "translate(-50%, -50%)", color: "#0d0f12", fontWeight: "bold", fontSize: "16px" }}>!</span>
+          </div>
           <p style={theme.text}>We want to ensure absolute satisfaction. Please let us know how we can improve our service:</p>
           <form onSubmit={handleFeedbackSubmit} style={{ width: "100%" }}>
             <textarea
