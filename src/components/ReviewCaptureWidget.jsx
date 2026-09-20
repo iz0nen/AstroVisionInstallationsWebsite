@@ -92,8 +92,8 @@ export default function ReviewCaptureWidget({ config = DEFAULT_SAAS_CONFIG }) {
       gap: "8px"
     },
     logo: {
-      width: "125px",
-      height: "75px",
+      width: "135px",
+      height: "85px",
       objectFit: "contain",
       borderRadius: "4px"
     },
