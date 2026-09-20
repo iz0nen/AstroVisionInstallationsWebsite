@@ -82,7 +82,7 @@ export default function ReviewCaptureWidget({ config = DEFAULT_SAAS_CONFIG }) {
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
-      padding: "12px 14px",
+      padding: "14px 14px",
       borderBottom: "1px solid #1e293b",
       backgroundColor: "#111418"
     },
@@ -92,8 +92,8 @@ export default function ReviewCaptureWidget({ config = DEFAULT_SAAS_CONFIG }) {
       gap: "8px"
     },
     logo: {
-      width: "18px",
-      height: "18px",
+      width: "28px",
+      height: "28px",
       objectFit: "contain",
       borderRadius: "4px"
     },
