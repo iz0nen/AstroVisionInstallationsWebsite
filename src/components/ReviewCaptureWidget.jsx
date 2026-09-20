@@ -14,12 +14,12 @@ export default function ReviewCaptureWidget() {
   // 🔑 STEP 2 EMAIL INTEGRATION KEYS
   // Replace these text strings with your actual keys from your EmailJS portal dashboard!
   // =========================================================
-  const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID_HERE";
-  const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID_HERE";
-  const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY_HERE";
+  const EMAILJS_SERVICE_ID = "service_gudz7yt";
+  const EMAILJS_TEMPLATE_ID = "template_8mirf3d";
+  const EMAILJS_PUBLIC_KEY = "_rYQ0J_tXTT1xYofy";
 
   // Your real, verified Google Place ID review link
-  const GOOGLE_REVIEW_URL = "https://google.com";
+  const GOOGLE_REVIEW_URL = "https://g.page/r/CeilsGq7gXtVECE/review";
 
   const handleStarClick = (selectedRating) => {
     setRating(selectedRating);
