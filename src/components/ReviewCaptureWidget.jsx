@@ -8,7 +8,7 @@ import emailjs from "@emailjs/browser";
 // API endpoint based on the client's unique API token/ID script embedding.
 // =========================================================================
 const DEFAULT_SAAS_CONFIG = {
-  brandName: "Astro Vision",
+  brandName: "Feedback",
   logoUrl: "https://raw.githubusercontent.com/iz0nen/AstroVisionInstallationsWebsite/main/public/assets/astro-vision-header-logo.png", // Replace with actual hosted client graphic
   primaryColor: "#2563eb",                 // Branding emphasis color
   secondaryColor: "#60a5fa",               // Text link anchor color
@@ -92,8 +92,8 @@ export default function ReviewCaptureWidget({ config = DEFAULT_SAAS_CONFIG }) {
       gap: "8px"
     },
     logo: {
-      width: "28px",
-      height: "28px",
+      width: "75px",
+      height: "50px",
       objectFit: "contain",
       borderRadius: "4px"
     },
