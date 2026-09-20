@@ -60,7 +60,7 @@ export default function ReviewCaptureWidget() {
       position: "fixed",
       bottom: "16px",
       right: "16px",
-      width: "300px",
+      width: "250px",
       backgroundColor: "#0d0f12",
       border: "2px solid #2563eb",
       borderRadius: "10px",
