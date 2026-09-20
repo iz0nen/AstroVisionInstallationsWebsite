@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Star, X, CheckCircle, Send, MessageSquareAlert } from "lucide-react";
-import emailjs from "@emailjs/browser"; // Import the secure email network client
+import emailjs from "@emailjs/browser";
 
 export default function ReviewCaptureWidget({ googleReviewUrl }) {
   const [isOpen, setIsOpen] = useState(true);
@@ -10,7 +10,6 @@ export default function ReviewCaptureWidget({ googleReviewUrl }) {
   const [feedbackText, setFeedbackText] = useState("");
   const [isSending, setIsSending] = useState(false);
 
-  // EmailJS Constants Configuration Profile
   const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID_HERE";
   const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID_HERE";
   const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY_HERE";
@@ -28,7 +27,6 @@ export default function ReviewCaptureWidget({ googleReviewUrl }) {
     e.preventDefault();
     setIsSending(true);
 
-    // Map template parameters dynamically based on form layout inputs
     const templateParams = {
       rating: rating,
       comment: feedbackText,
@@ -43,7 +41,6 @@ export default function ReviewCaptureWidget({ googleReviewUrl }) {
       .catch((error) => {
         console.error("Failed to transmit form payload:", error);
         setIsSending(false);
-        // Fallback transition to complete step anyway so user experience doesn't break
         setStep("complete");
       });
   };
@@ -121,6 +118,7 @@ export default function ReviewCaptureWidget({ googleReviewUrl }) {
         <div style={theme.body}>
           <p style={theme.text}>How would you rate your recent commercial installation experience with our crew?</p>
           <div style={theme.starsRow}>
+            {/* Fixed: Re-inserted the array matrix sequence correctly here */}
             {[1, 2, 3, 4, 5].map((star) => (
               <Star
                 key={star}
