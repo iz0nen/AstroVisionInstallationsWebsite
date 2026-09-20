@@ -1,24 +1,31 @@
 import React, { useState } from "react";
-import { Star, X, CheckCircle, Send, MessageSquare } from "lucide-react";
+import { Star, X, CheckCircle, Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
-export default function ReviewCaptureWidget() {
+// =========================================================================
+// 🚀 PRODUCTION BLUEPRINT EXAMPLE CONFIG
+// In a true SaaS environment, this object will be fetched from your database
+// API endpoint based on the client's unique API token/ID script embedding.
+// =========================================================================
+const DEFAULT_SAAS_CONFIG = {
+  brandName: "Astro Vision",
+  logoUrl: "https://placeholder.com", // Replace with actual hosted client graphic
+  primaryColor: "#2563eb",                 // Branding emphasis color
+  secondaryColor: "#60a5fa",               // Text link anchor color
+  promptText: "How would you rate your recent commercial installation experience with our crew?",
+  googleReviewUrl: "https://g.page/r/CeilsGq7gXtVECE/review",
+  emailJsServiceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  emailJsTemplateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  emailJsPublicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+};
+
+export default function ReviewCaptureWidget({ config = DEFAULT_SAAS_CONFIG }) {
   const [isOpen, setIsOpen] = useState(true);
-  const [step, setStep] = useState("form"); // "form" or "complete"
+  const [step, setStep] = useState("form"); 
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
   const [feedbackText, setFeedbackText] = useState("");
   const [isSending, setIsSending] = useState(false);
-
-  // =========================================================
-  // 🔑 EMAIL INTEGRATION KEYS
-  // =========================================================
-  const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-  const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-  const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
-  // Your real, verified Google Place ID review link
-  const GOOGLE_REVIEW_URL = "https://g.page/r/CeilsGq7gXtVECE/review";
 
   const handleFeedbackSubmit = (e) => {
     e.preventDefault();
@@ -32,10 +39,16 @@ export default function ReviewCaptureWidget() {
     const templateParams = {
       rating: rating,
       comment: feedbackText,
+      client_name: config.brandName // Keep track of which client sent it in EmailJS
     };
 
     emailjs
-      .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY)
+      .send(
+        config.emailJsServiceId, 
+        config.emailJsTemplateId, 
+        templateParams, 
+        config.emailJsPublicKey
+      )
       .then(() => {
         setIsSending(false);
         setStep("complete");
@@ -43,14 +56,13 @@ export default function ReviewCaptureWidget() {
       .catch((error) => {
         console.error("Failed to transmit form payload:", error);
         setIsSending(false);
-        // Transition to complete anyway so the user experience doesn't break
         setStep("complete");
       });
   };
 
   if (!isOpen) return null;
 
-  // Downsized, space-saving UI structural styling map
+  // Fully dynamic white-label styling architecture
   const theme = {
     overlay: {
       position: "fixed",
@@ -58,7 +70,7 @@ export default function ReviewCaptureWidget() {
       right: "16px",
       width: "260px",
       backgroundColor: "#0d0f12",
-      border: "2px solid #2563eb",
+      border: `2px solid ${config.primaryColor}`, // Dynamic accent border
       borderRadius: "10px",
       boxShadow: "0 10px 20px -5px rgba(0, 0, 0, 0.7)",
       fontFamily: "system-ui, -apple-system, sans-serif",
@@ -74,6 +86,17 @@ export default function ReviewCaptureWidget() {
       borderBottom: "1px solid #1e293b",
       backgroundColor: "#111418"
     },
+    headerLeft: {
+      display: "flex",
+      alignItems: "center",
+      gap: "8px"
+    },
+    logo: {
+      width: "18px",
+      height: "18px",
+      objectFit: "contain",
+      borderRadius: "4px"
+    },
     title: { fontSize: "13px", fontWeight: "600", margin: 0, letterSpacing: "0.3px" },
     closeBtn: { background: "none", border: "none", color: "#9ca3af", cursor: "pointer", padding: "2px" },
     body: { padding: "16px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" },
@@ -81,7 +104,7 @@ export default function ReviewCaptureWidget() {
     starsRow: { display: "flex", gap: "6px", margin: "4px 0 12px 0" },
     actionBtn: {
       width: "100%",
-      backgroundColor: "#2563eb",
+      backgroundColor: config.primaryColor, // Dynamic core action color
       color: "#ffffff",
       border: "none",
       borderRadius: "6px",
@@ -96,7 +119,7 @@ export default function ReviewCaptureWidget() {
     },
     secondaryLink: {
       fontSize: "12px",
-      color: "#60a5fa",
+      color: config.secondaryColor, // Dynamic textual link color
       textDecoration: "underline",
       marginTop: "12px",
       cursor: "pointer",
@@ -122,7 +145,17 @@ export default function ReviewCaptureWidget() {
   return (
     <div style={theme.overlay}>
       <div style={theme.header}>
-        <h4 style={theme.title}>AstroVision Feedback</h4>
+        <div style={theme.headerLeft}>
+          {config.logoUrl && (
+            <img 
+              src={config.logoUrl} 
+              alt="" 
+              style={theme.logo} 
+              onError={(e) => { e.target.style.display = 'none'; }}
+            />
+          )}
+          <h4 style={theme.title}>{config.brandName}</h4>
+        </div>
         <button onClick={() => setIsOpen(false)} style={theme.closeBtn}>
           <X size={16} />
         </button>
@@ -130,7 +163,7 @@ export default function ReviewCaptureWidget() {
 
       {step === "form" && (
         <div style={theme.body}>
-          <p style={theme.text}>How would you rate your recent commercial installation experience with our crew?</p>
+          <p style={theme.text}>{config.promptText}</p>
           
           <div style={theme.starsRow}>
             {[1, 2, 3, 4, 5].map((star) => (
@@ -172,7 +205,7 @@ export default function ReviewCaptureWidget() {
                 Thank you for the fantastic feedback! Would you mind sharing your experience on Google to help us grow?
               </p>
               <a 
-                href={GOOGLE_REVIEW_URL} 
+                href={config.googleReviewUrl} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 style={{ ...theme.actionBtn, textDecoration: "none" }}
@@ -187,7 +220,7 @@ export default function ReviewCaptureWidget() {
                 Thank you. We have received your notes privately and our management team will review them immediately to make things right.
               </p>
               <a 
-                href={GOOGLE_REVIEW_URL} 
+                href={config.googleReviewUrl} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 style={theme.secondaryLink}
